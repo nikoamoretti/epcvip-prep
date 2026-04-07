@@ -304,46 +304,63 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
 
   <!-- 60 DAYS -->
   <div class="card col">
-    <div class="ct" onclick="tC(this)"><span style="color:var(--accent)">60 days</span> — Build rhythm</div>
+    <div class="ct" onclick="tC(this)"><span style="color:var(--accent)">60 days</span> — Install the operating system</div>
     <div class="cb">
-      <p><strong>L10 meetings live</strong> across all 3 teams. Weekly, scorecard-driven, 60 min.</p>
-      <div class="tl">Scorecards</div>
+      <div class="tl">Meetings</div>
+      <ul>
+        <li>Design and launch <strong>weekly L10 meeting</strong> for each team (3 total)</li>
+        <li>Define scorecard metrics per team — automate data pull so numbers are ready before each meeting</li>
+      </ul>
       <table class="dt">
         <tr><td style="color:var(--accent)">BizDev</td><td>Pipeline, new buyers closed, meetings booked</td></tr>
         <tr><td style="color:var(--green)">Client Rel</td><td>Buyer health, revenue retention, acceptance rate, open issues</td></tr>
         <tr><td style="color:var(--blue)">Affiliates</td><td>EPC, traffic quality, compliance flags, fill rate</td></tr>
       </table>
-      <div class="tl">Quick wins</div>
+      <div class="tl">HubSpot fixes (no engineering needed)</div>
       <ul>
-        <li>Standardized onboarding checklists (buyers + publishers)</li>
-        <li>Pipeline stage definitions with exit criteria</li>
-        <li>Weekly consolidated summary for Boris</li>
-        <li>Fix HubSpot adoption gaps from migration</li>
+        <li>Create <strong>onboarding checklists</strong> in HubSpot for new buyers and new publishers — so every onboarding follows the same steps</li>
+        <li>Define <strong>pipeline stages with exit criteria</strong> — everyone agrees what "Discovery" vs "Proposal" means</li>
+        <li>Fix inconsistencies from migration — make 26 users use HubSpot the same way</li>
+      </ul>
+      <div class="tl">First data work (scrappy, no engineering)</div>
+      <ul>
+        <li>Get existing reports as CSVs from whoever pulls them today</li>
+        <li>Write a script to push key metrics into HubSpot custom properties</li>
+        <li>Build Boris a <strong>weekly email/Slack summary</strong> across all 3 teams</li>
       </ul>
     </div>
   </div>
 
   <!-- 90 DAYS -->
   <div class="card col">
-    <div class="ct" onclick="tC(this)"><span style="color:var(--green)">90 days</span> — Prove it</div>
+    <div class="ct" onclick="tC(this)"><span style="color:var(--green)">90 days</span> — Automations + insights live</div>
     <div class="cb">
+      <div class="tl">What's now running on autopilot</div>
       <ul>
-        <li>L10 is muscle memory across all 3 teams</li>
-        <li>Boris has <strong>one dashboard</strong> — performance, risk, process compliance</li>
-        <li>Playbooks documented and in use</li>
+        <li>L10 meetings are habit — teams run them without being reminded</li>
+        <li>Scorecard data populates automatically before each meeting</li>
+        <li>Playbooks documented — a new hire can follow the process without tribal knowledge</li>
       </ul>
-      <div class="tl">First automations live</div>
-      <div style="display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 8px">
-        <span class="tag gn">Broken link → task</span>
-        <span class="tag gn">Volume drop → alert</span>
-        <span class="tag gn">Quality dip → flag</span>
-        <span class="tag gn">Deal stall → task</span>
-        <span class="tag gn">Renewal → workflow</span>
-        <span class="tag gn">Nightly summary → Slack</span>
-      </div>
+      <div class="tl">Automations you've built in HubSpot</div>
+      <table class="dt">
+        <tr><th>Trigger</th><th>Action</th><th>Who benefits</th></tr>
+        <tr><td>Link breaks on a buyer's page</td><td>Task created for account manager with buyer name + campaign</td><td>Client Relations</td></tr>
+        <tr><td>Buyer volume drops &gt;20% on a campaign</td><td>Alert to account manager before buyer complains</td><td>Client Relations</td></tr>
+        <tr><td>Publisher acceptance rate drops</td><td>Flag to affiliate manager with specific numbers</td><td>Affiliates</td></tr>
+        <tr><td>Deal sits in same stage &gt;X days</td><td>Task to rep + notification to manager</td><td>BizDev</td></tr>
+        <tr><td>Contract renewal in 30 days</td><td>Prep task auto-created with buyer history</td><td>Client Relations</td></tr>
+        <tr><td>Every night at 8pm</td><td>Performance summary → Slack/email to leadership</td><td>Boris</td></tr>
+      </table>
+      <div class="tl">Insights now visible in HubSpot</div>
       <ul>
-        <li>Data bridge roadmap scoped with CTO</li>
-        <li>Before/after visible — can show concrete improvements</li>
+        <li>Buyer health score (green/yellow/red) on every buyer Company record</li>
+        <li>Publisher quality score on every publisher record</li>
+        <li>Boris has <strong>one dashboard</strong>: red flags, revenue, pipeline, team activity</li>
+      </ul>
+      <div class="tl">What's next (scoped, not built yet)</div>
+      <ul>
+        <li>Roadmap for full data bridge with CTO — proper API instead of CSV scripts</li>
+        <li>Before/after deck showing concrete improvements to present to Valeriy</li>
       </ul>
     </div>
   </div>

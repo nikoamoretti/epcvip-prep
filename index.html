@@ -275,317 +275,151 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
 <!-- ═══════ OPERATIONAL PLAN ═══════ -->
 <section id="plan">
   <div class="sl">Your game plan</div>
-  <h2>The Operational Plan</h2>
-  <p class="si" style="margin-bottom:6px">Tap each card to expand. Know this cold.</p>
-  <p class="in" style="margin-bottom:16px">Recruiter says: team is sold on your AI/tech. Valeriy needs to see <strong>operational strength</strong>. Lead with rhythm and accountability — data bridge serves the ops goals.</p>
+  <h2>Operational Plan</h2>
+  <p class="in">Lead with ops, not tech. Valeriy needs to see rhythm &amp; accountability.</p>
 
-  <!-- 30/60/90 VISUAL TIMELINE -->
-  <div class="card">
-    <div class="ct" onclick="tC(this)">30 / 60 / 90 Day Timeline</div>
+  <!-- PRIORITY FLOW -->
+  <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin:12px 0 20px">
+    <span class="tag y">1 Rhythm</span><span style="color:var(--muted)">→</span>
+    <span class="tag gn">2 Standardize</span><span style="color:var(--muted)">→</span>
+    <span class="tag bl">3 Visibility</span><span style="color:var(--muted)">→</span>
+    <span class="tag" style="color:var(--orange);border-color:rgba(255,150,71,.3);background:rgba(255,150,71,.07)">4 Data bridge</span>
+  </div>
+
+  <!-- 30/60/90 -->
+  <div class="card col">
+    <div class="ct" onclick="tC(this)">30 / 60 / 90 Timeline</div>
     <div class="cb">
-
-    <!-- DAY 30 -->
-    <div style="display:flex;gap:16px;margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:48px">
-        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#d4a574,#e8c49a);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.3rem;color:#08090d">30</div>
-        <div style="width:2px;flex:1;background:rgba(212,165,116,0.2);margin-top:4px"></div>
-      </div>
-      <div style="flex:1;padding-bottom:24px">
-        <h4 style="font-size:1.6rem;font-weight:700;color:#d4a574;margin-bottom:8px">Listen &amp; Map</h4>
-        <div style="background:#141620;border:1px solid rgba(212,165,116,0.08);border-radius:8px;padding:14px">
-          <p style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:0 0 10px"><strong style="color:#e6e1d8">Goal:</strong> Understand reality before touching anything</p>
-          <ul style="padding-left:18px;margin:0">
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Shadow every team.</strong> Sit with BizDev, Client Relations, and Affiliate Relations. Watch how they work, what tools they actually use, where they get stuck.</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Audit HubSpot.</strong> What's being used? What's ignored? What's inconsistent across the 26 users? Where did the ATAK migration leave gaps?</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Map processes.</strong> What processes exist today vs. what should exist? Where is tribal knowledge replacing documented process?</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Understand the data landscape.</strong> What data exists in the platform? What's in QuickSight? What makes it into HubSpot? Where are the two sources of truth?</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Meet John Lambert (CTO).</strong> Start building the relationship for the eventual data bridge. Understand what's possible technically.</li>
-          </ul>
-          <div style="margin-top:12px;padding:10px 14px;background:rgba(201,99,94,0.08);border:1px solid rgba(201,99,94,0.12);border-radius:6px;color:#c9635e;font-size:1.25rem;font-weight:600">
-            DO NOT change anything yet. Do not propose solutions. Listen.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- DAY 60 -->
-    <div style="display:flex;gap:16px;margin-bottom:4px">
-      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:48px">
-        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#5bb8ae,#7dd3c9);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.3rem;color:#08090d">60</div>
-        <div style="width:2px;flex:1;background:rgba(91,184,174,0.2);margin-top:4px"></div>
-      </div>
-      <div style="flex:1;padding-bottom:24px">
-        <h4 style="font-size:1.6rem;font-weight:700;color:#5bb8ae;margin-bottom:8px">Operating Rhythm &amp; Quick Wins</h4>
-        <div style="background:#141620;border:1px solid rgba(91,184,174,0.08);border-radius:8px;padding:14px">
-          <p style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:0 0 10px"><strong style="color:#e6e1d8">Goal:</strong> Install the operating system for the revenue org</p>
-          <ul style="padding-left:18px;margin:0">
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Stand up L10 cadence</strong> across all 3 teams. Weekly, same structure: scorecard review → rock update → IDS on top 2-3 issues. 60 minutes max.</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Define team scorecards</strong> (5-7 metrics each, automated before meeting starts):</li>
-          </ul>
-          <table style="width:100%;border-collapse:collapse;margin:10px 0;font-size:1.25rem">
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
-              <td style="padding:8px 10px;color:#d4a574;font-weight:700;white-space:nowrap">BizDev</td>
-              <td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Pipeline value, new buyers closed, meetings booked, proposals sent</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.06)">
-              <td style="padding:8px 10px;color:#5bb8ae;font-weight:700;white-space:nowrap">Client Relations</td>
-              <td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Buyer health scores, revenue retention, acceptance rate, open issues, expansion revenue</td>
-            </tr>
-            <tr>
-              <td style="padding:8px 10px;color:#8b7ec8;font-weight:700;white-space:nowrap">Affiliates</td>
-              <td style="padding:8px 10px;color:rgba(230,225,216,0.6)">EPC by publisher, traffic quality, compliance flags, new publishers recruited, fill rate</td>
-            </tr>
+      <div class="flow">
+        <div class="fs hi"><div class="ft"><strong>30 days — Listen</strong><br>Shadow all 3 teams. Audit HubSpot (26 users — what's used, ignored, inconsistent). Map existing processes vs gaps. Meet John Lambert (CTO) to scope data landscape. <em>Change nothing yet.</em></div></div>
+        <div class="fs hi"><div class="ft"><strong>60 days — Build rhythm</strong><br>L10 meetings live across all 3 teams (weekly, scorecard-driven, 60 min). Scorecards defined:</div>
+          <table class="dt" style="margin:8px 0">
+            <tr><td style="color:var(--accent)">BizDev</td><td>Pipeline, new buyers closed, meetings booked</td></tr>
+            <tr><td style="color:var(--green)">Client Rel</td><td>Buyer health, revenue retention, acceptance rate, open issues</td></tr>
+            <tr><td style="color:var(--blue)">Affiliates</td><td>EPC, traffic quality, compliance flags, fill rate</td></tr>
           </table>
-          <ul style="padding-left:18px;margin:0">
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Standardized onboarding checklists</strong> for new buyers and new publishers in HubSpot</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Pipeline stage definitions</strong> with clear exit criteria for every stage in every pipeline</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Weekly summary for Boris</strong> — consolidated from all 3 L10s. Key issues, key wins, who needs attention.</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Clean up HubSpot adoption gaps</strong> from the migration. Get 26 users using it consistently, not freelancing.</li>
-          </ul>
+          <div class="ft">Quick wins: onboarding checklists, stage definitions, weekly summary for Boris. Fix HubSpot adoption gaps.</div>
         </div>
-      </div>
-    </div>
-
-    <!-- DAY 90 -->
-    <div style="display:flex;gap:16px">
-      <div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:48px">
-        <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#6bbd7a,#8fd49b);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:1.3rem;color:#08090d">90</div>
-      </div>
-      <div style="flex:1">
-        <h4 style="font-size:1.6rem;font-weight:700;color:#6bbd7a;margin-bottom:8px">Prove It &amp; Scope What's Next</h4>
-        <div style="background:#141620;border:1px solid rgba(107,189,122,0.08);border-radius:8px;padding:14px">
-          <p style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:0 0 10px"><strong style="color:#e6e1d8">Goal:</strong> Show before/after. Earn the right to ask for engineering resources.</p>
-          <ul style="padding-left:18px;margin:0">
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">L10 is muscle memory</strong> across all 3 departments. No one is asking "do we have a meeting this week?"</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Boris has ONE dashboard</strong> — who's performing, who's at risk, who's following process. Revenue by buyer, vertical, affiliate. Pipeline by stage.</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Playbooks documented</strong> for each team. A solid new hire can perform quickly without tribal knowledge.</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">First automations live:</strong></li>
-          </ul>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin:10px 0">
-            <div style="padding:10px 12px;background:rgba(107,189,122,0.06);border:1px solid rgba(107,189,122,0.1);border-radius:6px;font-size:1.25rem;color:rgba(230,225,216,0.6)"><strong style="color:#6bbd7a">Broken link</strong> → task to account manager with buyer name + affected campaign</div>
-            <div style="padding:10px 12px;background:rgba(107,189,122,0.06);border:1px solid rgba(107,189,122,0.1);border-radius:6px;font-size:1.25rem;color:rgba(230,225,216,0.6)"><strong style="color:#6bbd7a">Buyer volume drops 20%</strong> → alert before the buyer calls to complain</div>
-            <div style="padding:10px 12px;background:rgba(107,189,122,0.06);border:1px solid rgba(107,189,122,0.1);border-radius:6px;font-size:1.25rem;color:rgba(230,225,216,0.6)"><strong style="color:#6bbd7a">Publisher quality dips</strong> → flag for affiliate team with acceptance rate data</div>
-            <div style="padding:10px 12px;background:rgba(107,189,122,0.06);border:1px solid rgba(107,189,122,0.1);border-radius:6px;font-size:1.25rem;color:rgba(230,225,216,0.6)"><strong style="color:#6bbd7a">Deal stalls X days</strong> → auto-task to rep and manager</div>
-            <div style="padding:10px 12px;background:rgba(107,189,122,0.06);border:1px solid rgba(107,189,122,0.1);border-radius:6px;font-size:1.25rem;color:rgba(230,225,216,0.6)"><strong style="color:#6bbd7a">Contract renewal approaching</strong> → trigger workflow + assign prep task</div>
-            <div style="padding:10px 12px;background:rgba(107,189,122,0.06);border:1px solid rgba(107,189,122,0.1);border-radius:6px;font-size:1.25rem;color:rgba(230,225,216,0.6)"><strong style="color:#6bbd7a">Nightly performance summary</strong> → Slack/email to leadership</div>
+        <div class="fs hi"><div class="ft"><strong>90 days — Prove it</strong><br>L10 is muscle memory. Boris has one dashboard. Playbooks in use. First automations live:</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin:6px 0">
+            <span class="tag gn">Broken link → task</span>
+            <span class="tag gn">Volume drop → alert</span>
+            <span class="tag gn">Quality dip → flag</span>
+            <span class="tag gn">Deal stall → task</span>
+            <span class="tag gn">Renewal → workflow</span>
+            <span class="tag gn">Nightly summary → Slack</span>
           </div>
-          <ul style="padding-left:18px;margin:8px 0 0">
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Data bridge roadmap scoped</strong> with John Lambert's (CTO) team. What data, what format, what timeline, what engineering effort required.</li>
-            <li style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:5px 0"><strong style="color:#e6e1d8">Before/after visible.</strong> Can show Boris and Valeriy concrete improvements.</li>
-          </ul>
+          <div class="ft">Data bridge roadmap scoped with CTO. Before/after visible.</div>
         </div>
       </div>
+      <div class="qt">"Operating rhythm first, standardization second, visibility third, data bridge last. Listen before I build, prove value before I ask for engineering resources."</div>
     </div>
   </div>
 
-    </div>
-  </div>
-
-  <!-- PRIORITY ORDER - always visible, compact -->
-  <div style="padding:12px 16px;background:rgba(212,165,116,0.06);border:1px solid rgba(212,165,116,0.1);border-radius:8px;margin:10px 0">
-    <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
-      <span style="padding:6px 14px;background:#d4a574;color:#08090d;border-radius:20px;font-size:1.2rem;font-weight:700">1. Rhythm</span>
-      <span style="color:rgba(230,225,216,0.25);font-size:1.4rem">→</span>
-      <span style="padding:6px 14px;background:rgba(91,184,174,0.15);border:1px solid rgba(91,184,174,0.2);color:#5bb8ae;border-radius:20px;font-size:1.2rem;font-weight:700">2. Standardize</span>
-      <span style="color:rgba(230,225,216,0.25);font-size:1.4rem">→</span>
-      <span style="padding:6px 14px;background:rgba(107,189,122,0.12);border:1px solid rgba(107,189,122,0.18);color:#6bbd7a;border-radius:20px;font-size:1.2rem;font-weight:700">3. Visibility</span>
-      <span style="color:rgba(230,225,216,0.25);font-size:1.4rem">→</span>
-      <span style="padding:6px 14px;background:rgba(139,126,200,0.12);border:1px solid rgba(139,126,200,0.18);color:#8b7ec8;border-radius:20px;font-size:1.2rem;font-weight:700">4. Data bridge</span>
-    </div>
-  </div>
-
-  <!-- TWO-AXIS FRAMEWORK -->
-  <div class="card">
-    <div class="ct" onclick="tC(this)">Two-Axis Framework — Help Teams + Give Boris Leverage</div>
+  <!-- TWO AXES -->
+  <div class="card col">
+    <div class="ct" onclick="tC(this)">Two-axis framework</div>
     <div class="cb">
-    <div style="background:rgba(91,184,174,0.04);border:1px solid rgba(91,184,174,0.12);border-radius:10px;padding:16px;margin-bottom:12px">
-      <h4 style="font-size:1.5rem;font-weight:700;color:#5bb8ae;margin-bottom:14px">Axis 1: Help the Teams Perform Higher</h4>
-
-      <p style="color:#e6e1d8;font-weight:700;font-size:1.35rem;margin:14px 0 6px">Data Bridge — Get platform data into HubSpot</p>
-      <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:7px 10px;color:#5bb8ae;font-weight:600;width:130px">For buyers</td><td style="padding:7px 10px;color:rgba(230,225,216,0.6)">Volume delivered vs contracted, acceptance rate, return rate + reasons, conversion/funded loan rate, revenue per lead, bid price trends, active campaigns</td></tr>
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:7px 10px;color:#8b7ec8;font-weight:600">For affiliates</td><td style="padding:7px 10px;color:rgba(230,225,216,0.6)">EPC by vertical, traffic quality score, compliance status, fill rate, fraud/reject rate, revenue trends</td></tr>
-        <tr><td style="padding:7px 10px;color:#d4a574;font-weight:600">Buyer health score</td><td style="padding:7px 10px;color:rgba(230,225,216,0.6)">Composite: volume trend + acceptance rate + return rate + revenue trend + engagement level = green/yellow/red on every Company record</td></tr>
+      <p><strong>Axis 1 — Help teams perform higher</strong></p>
+      <table class="dt">
+        <tr><th>Layer</th><th>What</th></tr>
+        <tr><td>Data bridge</td><td>Platform data → HubSpot. Buyer: volume, acceptance, returns, conversion, revenue. Affiliate: EPC, quality, compliance, fill rate.</td></tr>
+        <tr><td>Automation</td><td>Broken links, volume drops, quality dips, stalled deals, renewals, nightly summaries — all auto-triggered.</td></tr>
+        <tr><td>Standardization</td><td>Playbooks per team. Stage definitions + exit criteria. 26 users consistent.</td></tr>
+        <tr><td>Cross-team</td><td>Affiliate scales auto traffic → BizDev pitches auto lenders. Buyer wants debt → Affiliates recruit debt publishers.</td></tr>
       </table>
-
-      <p style="color:#e6e1d8;font-weight:700;font-size:1.35rem;margin:18px 0 6px">Automation — Alert before problems escalate</p>
-      <ul style="padding-left:18px;margin:0">
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Broken link → task to account manager with buyer name, affected campaign, suggested action</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Buyer volume drops 20% on a specific campaign → alert before they call</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Publisher acceptance rate drops (e.g. 68% → 41%) → flag to affiliate manager with specifics</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Deal stalls X days → auto-task to rep and manager</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Contract renewal approaching → trigger workflow</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">New meeting booked → Slack notification to team</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Nightly performance summary → Slack/email to leadership</li>
-      </ul>
-
-      <p style="color:#e6e1d8;font-weight:700;font-size:1.35rem;margin:18px 0 6px">Standardization — Make excellence repeatable</p>
-      <ul style="padding-left:18px;margin:0">
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Playbooks per team so a solid new hire can perform quickly</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Clear stage definitions and exit criteria in every pipeline</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Standardized onboarding checklists for new buyers and publishers</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Template for QBRs / account reviews</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">26 HubSpot users actually using it the same way</li>
-      </ul>
-
-      <p style="color:#e6e1d8;font-weight:700;font-size:1.35rem;margin:18px 0 6px">Cross-Team Intelligence — Three teams, one engine</p>
-      <ul style="padding-left:18px;margin:0">
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Affiliate scales auto finance traffic → BizDev knows to pitch auto lenders</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">Buyer wants more volume in debt → Affiliates know to recruit debt publishers</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:4px 0">9 verticals = massive cross-sell surface area the data should surface automatically</li>
-      </ul>
-    </div>
-
-    <div style="background:rgba(212,165,116,0.04);border:1px solid rgba(212,165,116,0.12);border-radius:10px;padding:16px">
-      <h4 style="font-size:1.5rem;font-weight:700;color:#d4a574;margin-bottom:14px">Axis 2: Give Boris Leverage</h4>
-      <p style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:0 0 12px">Boris has 9 direct reports across 3 departments. He needs to manage by exception, not by chasing updates.</p>
-      <ul style="padding-left:18px;margin:0">
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:5px 0"><strong style="color:#e6e1d8">One dashboard</strong> across BizDev, Client Relations, Affiliates</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:5px 0"><strong style="color:#e6e1d8">Who's performing, who's at risk, who's following process</strong></li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:5px 0"><strong style="color:#e6e1d8">Revenue by buyer, by vertical, by affiliate</strong></li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:5px 0"><strong style="color:#e6e1d8">Pipeline by stage, new buyers closed, churn risk</strong></li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:5px 0"><strong style="color:#e6e1d8">L10 rhythm</strong> across 3 departments, consolidated weekly summary for him</li>
-        <li style="color:rgba(230,225,216,0.6);font-size:1.3rem;margin:5px 0"><strong style="color:#e6e1d8">He manages by exception</strong> — red/yellow flags come to him, not raw data</li>
-      </ul>
-    </div>
-  </div>
-
+      <p style="margin-top:12px"><strong>Axis 2 — Give Boris leverage</strong></p>
+      <p>One dashboard: who's performing, who's at risk, who's following process. Revenue by buyer/vertical/affiliate. Pipeline by stage. L10 summaries consolidated. He manages by exception — red/yellow comes to him, green doesn't.</p>
     </div>
   </div>
 
   <!-- ROI LEVERS -->
-  <div class="card">
-    <div class="ct" onclick="tC(this)">ROI Levers — If He Asks About Innovation</div>
+  <div class="card col">
+    <div class="ct" onclick="tC(this)">ROI levers (if he asks)</div>
     <div class="cb">
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px">
-    <div style="padding:14px;background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:8px"><p style="color:#d4a574;font-weight:700;font-size:1.35rem;margin:0 0 4px">Smart Matching</p><p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0">Route leads to the buyer most likely to <em>fund</em> that profile, not just the highest bidder. Surface conversion-by-source data for Client Relations.</p></div>
-    <div style="padding:14px;background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:8px"><p style="color:#5bb8ae;font-weight:700;font-size:1.35rem;margin:0 0 4px">Exclusive vs Shared</p><p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0">Show buyers their conversion on exclusive vs shared — some win paying 2x for 3x conversion. Build the dashboard that makes this visible per buyer.</p></div>
-    <div style="padding:14px;background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:8px"><p style="color:#6bbd7a;font-weight:700;font-size:1.35rem;margin:0 0 4px">Cross-Vertical Routing</p><p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0">Consumer doesn't qualify for personal loan → route to debt consolidation or credit monitoring instead of wasting the lead.</p></div>
-    <div style="padding:14px;background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:8px"><p style="color:#8b7ec8;font-weight:700;font-size:1.35rem;margin:0 0 4px">Return Feedback Loop</p><p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0">Capture <em>why</em> buyers reject leads → feed back to affiliates to fix targeting. Standardize the return reason taxonomy.</p></div>
-    <div style="padding:14px;background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:8px"><p style="color:#e8c49a;font-weight:700;font-size:1.35rem;margin:0 0 4px">Speed-to-Contact</p><p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0">Leads contacted within 5 min convert 8-10x vs 30 min. Build the report showing buyers their own response time data.</p></div>
-    <div style="padding:14px;background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:8px"><p style="color:#c9635e;font-weight:700;font-size:1.35rem;margin:0 0 4px">Waterfall Optimization</p><p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0">When top bidder rejects, ML picks the backup buyer most likely to accept <em>and fund</em>. You surface the data that shows it's working.</p></div>
-  </div>
-  <div style="margin:14px 0;padding:14px 16px;background:rgba(212,165,116,0.06);border-left:3px solid #d4a574;border-radius:0 6px 6px 0;position:relative">
-    <p style="position:absolute;top:-8px;left:12px;font-family:'JetBrains Mono',monospace;font-size:0.9rem;font-weight:600;letter-spacing:0.1em;color:#d4a574;background:#0e1018;padding:0 6px">SAY</p>
-    <p style="color:#e6e1d8;font-style:italic;font-size:1.4rem;margin:4px 0">"The biggest ROI lever is the data that already exists in the platform but isn't reaching the revenue teams. If Client Relations can see conversion rate by lead source, they can talk exclusive vs shared pricing. If they can see return reasons categorized, they can work with affiliates to fix targeting. The platform already knows which leads convert — the innovation is making that intelligence actionable."</p>
-  </div>
-
+      <table class="dt">
+        <tr><th>Lever</th><th>Impact</th></tr>
+        <tr><td>Smart matching</td><td>Route to buyer most likely to fund, not just highest bidder</td></tr>
+        <tr><td>Exclusive vs shared</td><td>Show buyers their conversion rate on each — some win paying 2x for 3x conversion</td></tr>
+        <tr><td>Cross-vertical routing</td><td>Doesn't qualify for personal loan → route to debt consolidation instead of wasting the lead</td></tr>
+        <tr><td>Return feedback loop</td><td>Capture why buyers reject → feed back to affiliates to fix targeting</td></tr>
+        <tr><td>Speed-to-contact</td><td>Leads contacted in 5 min convert 8-10x vs 30 min. Show buyers their own response time.</td></tr>
+        <tr><td>Waterfall optimization</td><td>ML picks backup buyer most likely to accept and fund, not just next-highest bid</td></tr>
+      </table>
+      <div class="qt">"The biggest ROI lever is data that already exists but isn't reaching the revenue teams. The platform knows which leads convert — the innovation is making that intelligence actionable."</div>
     </div>
   </div>
 
-  <!-- DATA BRIDGE: HOW IT ACTUALLY WORKS -->
-  <div class="card">
-    <div class="ct" onclick="tC(this)">Data Bridge — How You'd Build It (Scrappy Version)</div>
+  <!-- DATA BRIDGE -->
+  <div class="card col">
+    <div class="ct" onclick="tC(this)">Data bridge — how you'd build it</div>
     <div class="cb">
-
-  <!-- FLOW DIAGRAM -->
-  <div style="background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:20px;margin-bottom:16px">
-    <p style="font-family:'JetBrains Mono',monospace;font-size:1.05rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#d4a574;margin-bottom:12px">The flow</p>
-    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:16px">
-      <span style="padding:10px 16px;background:rgba(139,126,200,0.12);border:1px solid rgba(139,126,200,0.18);color:#8b7ec8;border-radius:8px;font-size:1.3rem;font-weight:700">Platform DB</span>
-      <span style="color:rgba(230,225,216,0.3);font-size:1.8rem">→</span>
-      <span style="padding:10px 16px;background:rgba(212,165,116,0.1);border:1px solid rgba(212,165,116,0.15);color:#d4a574;border-radius:8px;font-size:1.3rem;font-weight:700">Your script</span>
-      <span style="color:rgba(230,225,216,0.3);font-size:1.8rem">→</span>
-      <span style="padding:10px 16px;background:rgba(91,184,174,0.12);border:1px solid rgba(91,184,174,0.18);color:#5bb8ae;border-radius:8px;font-size:1.3rem;font-weight:700">HubSpot API</span>
-      <span style="color:rgba(230,225,216,0.3);font-size:1.8rem">→</span>
-      <span style="padding:10px 16px;background:rgba(107,189,122,0.12);border:1px solid rgba(107,189,122,0.18);color:#6bbd7a;border-radius:8px;font-size:1.3rem;font-weight:700">Custom properties on records</span>
-    </div>
-    <p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0"><strong style="color:#e6e1d8">Your one ask to engineering:</strong> "Can I get read access to a DB replica or a nightly export to S3?" You build everything else.</p>
-  </div>
-
-  <!-- SCRAPPY TIMELINE -->
-  <div style="background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:20px;margin-bottom:20px">
-    <p style="font-family:'JetBrains Mono',monospace;font-size:1.05rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5bb8ae;margin-bottom:12px">Scrappy timeline — no engineering dependency</p>
-    <div style="display:grid;grid-template-columns:64px 1fr;gap:4px 12px;font-size:1.3rem">
-      <span style="color:#d4a574;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Day 1</span><span style="color:rgba(230,225,216,0.6)">Find out what reports already exist and who pulls them for Boris</span>
-      <span style="color:#d4a574;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Day 3</span><span style="color:rgba(230,225,216,0.6)">Get those reports as CSVs — even manual is fine</span>
-      <span style="color:#d4a574;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Day 5</span><span style="color:rgba(230,225,216,0.6)">Vibe code a script: read CSV → transform → push to HubSpot API</span>
-      <span style="color:#5bb8ae;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Week 2</span><span style="color:rgba(230,225,216,0.6)">Automate: script runs on a schedule, reads from S3/shared drive</span>
-      <span style="color:#5bb8ae;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Week 3</span><span style="color:rgba(230,225,216,0.6)">Add health score logic, anomaly detection, alerting</span>
-      <span style="color:#6bbd7a;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Week 4</span><span style="color:rgba(230,225,216,0.6)">Show Boris his dashboard with real data. Value proven. Engineering buy-in earned.</span>
-    </div>
-  </div>
-
+      <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-bottom:12px">
+        <span class="tag bl">Platform DB</span><span style="color:var(--muted)">→</span>
+        <span class="tag y">Your script</span><span style="color:var(--muted)">→</span>
+        <span class="tag gn">HubSpot API</span><span style="color:var(--muted)">→</span>
+        <span class="tag" style="color:var(--text);border-color:var(--bl)">Custom properties</span>
+      </div>
+      <p><strong>One ask to engineering:</strong> read-only DB replica or nightly export to S3. You build everything else.</p>
+      <div class="tl">Scrappy timeline</div>
+      <div class="flow">
+        <div class="fs"><div class="ft"><strong>Day 1</strong> — Find what reports exist, who pulls them for Boris</div></div>
+        <div class="fs"><div class="ft"><strong>Day 3</strong> — Get those reports as CSVs</div></div>
+        <div class="fs"><div class="ft"><strong>Day 5</strong> — Vibe code script: CSV → transform → push to HubSpot API</div></div>
+        <div class="fs hi"><div class="ft"><strong>Week 2</strong> — Automate: runs on schedule from S3</div></div>
+        <div class="fs hi"><div class="ft"><strong>Week 3</strong> — Add health scores, anomaly detection</div></div>
+        <div class="fs hi"><div class="ft"><strong>Week 4</strong> — Boris sees real data in his dashboard. Value proven.</div></div>
+      </div>
     </div>
   </div>
 
   <!-- HUBSPOT SCHEMA -->
-  <div class="card">
-    <div class="ct" onclick="tC(this)">HubSpot Schema — What Each Team Sees</div>
+  <div class="card col">
+    <div class="ct" onclick="tC(this)">HubSpot schema by team</div>
     <div class="cb">
-    <p style="color:rgba(230,225,216,0.5);font-size:1.3rem;margin-bottom:12px">Buyers and publishers are already Company records. You add custom property groups + a Campaign custom object.</p>
+      <div class="tl">Client Relations — Buyer record</div>
+      <table class="dt">
+        <tr><th>Group</th><th>Fields</th></tr>
+        <tr><td>Health</td><td>Score (green/yellow/red), risk flags, last issue</td></tr>
+        <tr><td>Volume</td><td>Leads today/7d/30d, delivered vs contracted, by campaign</td></tr>
+        <tr><td>Quality</td><td>Acceptance rate, return rate + reasons, duplicates</td></tr>
+        <tr><td>Conversion</td><td>Funded loan rate, revenue/lead, cost/funded loan</td></tr>
+        <tr><td>Pricing</td><td>Avg bid, win rate, exclusive vs shared mix</td></tr>
+        <tr><td>Revenue</td><td>Revenue MTD, MoM trend %</td></tr>
+        <tr><td style="color:var(--muted)">Relationship</td><td>Contract expiry, last contact, open issues, stage <em>(native)</em></td></tr>
+      </table>
+      <p class="in">+ Custom Object "Campaign" per buyer (each buyer runs multiple). Workflows: health→yellow = task, health→red = task + Slack to Boris, volume drop &gt;20% = alert, renewal in 30d = prep task.</p>
 
-  <!-- CLIENT RELATIONS SCHEMA -->
-  <div style="background:#141620;border:1px solid rgba(91,184,174,0.12);border-top:3px solid #5bb8ae;border-radius:10px;padding:20px;margin-bottom:14px">
-    <h4 style="font-size:1.45rem;font-weight:700;color:#5bb8ae;margin-bottom:4px">Client Relations — Buyer Company Record</h4>
-    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-bottom:14px">What the account manager sees when they open a buyer's record</p>
-    <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Property Group</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Fields</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Source</th></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Health</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Health score (green/yellow/red), risk flags, last issue date</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Calculated</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Volume</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Leads delivered today / 7d / 30d, delivered vs contracted, volume by campaign</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Quality</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Acceptance rate, return rate, return reasons breakdown, duplicate rate</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Conversion</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Funded loan rate, revenue per lead, cost per funded loan</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Pricing</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Avg bid price, bid win rate, exclusive vs shared mix</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Revenue</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Revenue to EPCVIP (MTD, trend), MoM change %</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
-      <tr><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Relationship</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Contract expiration, last contact, open issues count, pipeline stage</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
-    </table>
-    <div style="margin-top:12px;padding:10px 14px;background:rgba(91,184,174,0.06);border:1px solid rgba(91,184,174,0.1);border-radius:6px">
-      <p style="color:#5bb8ae;font-size:1.2rem;margin:0"><strong>Custom Object: "Campaign"</strong> — associated to Company. Each buyer runs multiple campaigns (e.g. "Personal loans, CA+TX, 620+, $45/lead, exclusive"). One record per campaign with its own volume, acceptance rate, and status. This is how you flag "Campaign 3 is dying" while Campaigns 1 and 2 are fine.</p>
-    </div>
-    <div style="margin-top:8px;padding:10px 14px;background:rgba(91,184,174,0.06);border:1px solid rgba(91,184,174,0.1);border-radius:6px">
-      <p style="color:#5bb8ae;font-size:1.2rem;margin:0"><strong>Workflows triggered:</strong> Health → yellow = task to account manager. Health → red = task + Slack to Boris. Volume drop &gt;20% on any campaign = alert. Contract expiring in 30d = renewal prep task.</p>
-    </div>
-  </div>
+      <div class="tl">Affiliate Relations — Publisher record</div>
+      <table class="dt">
+        <tr><th>Group</th><th>Fields</th></tr>
+        <tr><td>Quality</td><td>Score (green/yellow/red), acceptance rate, return rate, fraud rate</td></tr>
+        <tr><td>Performance</td><td>EPC (overall + by vertical), EPL, CTR, fill rate</td></tr>
+        <tr><td>Volume</td><td>Total leads daily/weekly/monthly, by vertical, trend</td></tr>
+        <tr><td>Compliance</td><td>Status (clear/flagged/suspended), TCPA flags, last audit</td></tr>
+        <tr><td>Revenue</td><td>Payouts, revenue to EPCVIP, margin, pricing model</td></tr>
+        <tr><td style="color:var(--muted)">Profile</td><td>Traffic type, verticals, tier A/B/C, payment terms <em>(native)</em></td></tr>
+      </table>
+      <p class="in">Workflows: acceptance drops = auto-flag, inactive X days = task, compliance flag = task with context, weekly digest per manager → Slack.</p>
 
-  <!-- AFFILIATE RELATIONS SCHEMA -->
-  <div style="background:#141620;border:1px solid rgba(139,126,200,0.12);border-top:3px solid #8b7ec8;border-radius:10px;padding:20px;margin-bottom:14px">
-    <h4 style="font-size:1.45rem;font-weight:700;color:#8b7ec8;margin-bottom:4px">Affiliate Relations — Publisher Company Record</h4>
-    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-bottom:14px">What the affiliate manager sees when they open a publisher's record</p>
-    <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Property Group</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Fields</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Source</th></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Quality</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Quality score (green/yellow/red), acceptance rate, return rate, fraud/duplicate rate</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Calculated</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Performance</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">EPC (overall + by vertical), EPL, CTR, fill rate, conversion rate</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Volume</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Total leads (daily/weekly/monthly), leads by vertical, volume trend</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Compliance</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Compliance status (clear/flagged/suspended), last audit date, TCPA flags, open violations</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform + Legal</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Revenue</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Revenue to publisher (payouts), revenue to EPCVIP, margin, pricing model (CPC/CPA/rev-share)</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
-      <tr><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Profile</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Traffic type (email/display/PPC/social/push), verticals they run, tier (A/B/C), payment terms</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
-    </table>
-    <div style="margin-top:12px;padding:10px 14px;background:rgba(139,126,200,0.06);border:1px solid rgba(139,126,200,0.1);border-radius:6px">
-      <p style="color:#8b7ec8;font-size:1.2rem;margin:0"><strong>Workflows triggered:</strong> Acceptance rate drops below threshold = auto-flag for review. Inactive &gt;X days = task to check in. Compliance flag from legal = task with context. Weekly performance digest per affiliate manager's portfolio → auto Slack/email.</p>
-    </div>
-  </div>
+      <div class="tl">BizDev — Prospect record</div>
+      <table class="dt">
+        <tr><th>Group</th><th>Fields</th></tr>
+        <tr><td>Market data</td><td>Available lead volume in their verticals, avg conversion for similar buyers, avg bid prices</td></tr>
+        <tr><td>Deal</td><td>Stage, est. monthly revenue, close date, owner</td></tr>
+        <tr><td>Prospect intel</td><td>License states, verticals, current lead sources, conference history</td></tr>
+        <tr><td>Onboarding</td><td>Integration status, test leads sent, go-live date, handoff checklist</td></tr>
+      </table>
+      <p class="in">Key unlock: BD pulls live data into pitches — "We deliver 2,400 leads/day in your states with 71% acceptance." Killer pitch, currently impossible without asking for a manual report.</p>
 
-  <!-- BIZDEV SCHEMA -->
-  <div style="background:#141620;border:1px solid rgba(212,165,116,0.12);border-top:3px solid #d4a574;border-radius:10px;padding:20px;margin-bottom:14px">
-    <h4 style="font-size:1.45rem;font-weight:700;color:#d4a574;margin-bottom:4px">BizDev — Prospect / New Buyer Pipeline</h4>
-    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-bottom:14px">What the BD rep needs to pitch and close new lenders</p>
-    <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Property Group</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Fields</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Source</th></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#d4a574;font-weight:600;vertical-align:top">Market Data</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Available lead volume in prospect's verticals, avg conversion rate for similar buyers, avg bid prices in their category</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform (aggregated)</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#d4a574;font-weight:600;vertical-align:top">Deal</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Pipeline stage, deal value (est. monthly rev), close date, next action, owner</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#d4a574;font-weight:600;vertical-align:top">Prospect Intel</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Lending license states, verticals, current lead sources (if known), conference history</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
-      <tr><td style="padding:8px 10px;color:#d4a574;font-weight:600;vertical-align:top">Onboarding</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Integration status, test leads sent, go-live date, handoff to Client Relations (date + checklist)</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
-    </table>
-    <div style="margin-top:12px;padding:10px 14px;background:rgba(212,165,116,0.06);border:1px solid rgba(212,165,116,0.1);border-radius:6px">
-      <p style="color:#d4a574;font-size:1.2rem;margin:0"><strong>Key unlock:</strong> BizDev can pull live market data into pitches — "We're currently delivering 2,400 personal loan leads/day in your states with a 71% acceptance rate across similar buyers." That's a killer pitch. Right now they can't do this without asking someone to pull a report.</p>
-    </div>
-  </div>
-
-  <!-- BORIS DASHBOARD -->
-  <div style="background:#141620;border:1px solid rgba(232,196,154,0.15);border-top:3px solid #e8c49a;border-radius:10px;padding:20px;margin-bottom:14px">
-    <h4 style="font-size:1.45rem;font-weight:700;color:#e8c49a;margin-bottom:4px">Boris's Dashboard — One View</h4>
-    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-bottom:14px">What the CRO sees every morning</p>
-    <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Section</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Shows</th></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#c9635e;font-weight:600">Red Flags</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Buyers at risk (health yellow/red), publishers flagged, deals stalled, broken links</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#6bbd7a;font-weight:600">Revenue</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Total revenue MTD, by vertical, by buyer (top 10), by affiliate (top 10), MoM trend</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600">Pipeline</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">BizDev pipeline by stage, new buyers closed this month, projected close value</td></tr>
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600">Team Activity</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Tasks completed, meetings held, issues resolved — per team, per person</td></tr>
-      <tr><td style="padding:8px 10px;color:#d4a574;font-weight:600">L10 Summary</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">This week's key issues from all 3 L10s, rocks on/off track, scorecard red items</td></tr>
-    </table>
-    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-top:10px">He manages by exception. Red/yellow comes to him. Green doesn't.</p>
-  </div>
-
+      <div class="tl">Boris's dashboard</div>
+      <table class="dt">
+        <tr><td style="color:var(--red)">Red flags</td><td>Buyers at risk, publishers flagged, deals stalled, broken links</td></tr>
+        <tr><td style="color:var(--green)">Revenue</td><td>Total MTD, by vertical, top 10 buyers, top 10 affiliates, MoM trend</td></tr>
+        <tr><td style="color:var(--blue)">Pipeline</td><td>By stage, new buyers closed, projected close value</td></tr>
+        <tr><td style="color:var(--accent)">L10</td><td>Key issues from all 3 L10s, rocks on/off track, scorecard red items</td></tr>
+      </table>
+      <p class="in">Red/yellow comes to him. Green doesn't. He manages by exception.</p>
     </div>
   </div>
 

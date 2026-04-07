@@ -287,35 +287,68 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     <span class="tag" style="color:var(--orange);border-color:rgba(255,150,71,.3);background:rgba(255,150,71,.07)">4 Data bridge</span>
   </div>
 
-  <!-- 30/60/90 -->
+  <!-- 30 DAYS -->
   <div class="card col">
-    <div class="ct" onclick="tC(this)">30 / 60 / 90 Timeline</div>
+    <div class="ct" onclick="tC(this)"><span style="color:var(--orange)">30 days</span> — Listen &amp; map</div>
     <div class="cb">
-      <div class="flow">
-        <div class="fs hi"><div class="ft"><strong>30 days — Listen</strong><br>Shadow all 3 teams. Audit HubSpot (26 users — what's used, ignored, inconsistent). Map existing processes vs gaps. Meet John Lambert (CTO) to scope data landscape. <em>Change nothing yet.</em></div></div>
-        <div class="fs hi"><div class="ft"><strong>60 days — Build rhythm</strong><br>L10 meetings live across all 3 teams (weekly, scorecard-driven, 60 min). Scorecards defined:</div>
-          <table class="dt" style="margin:8px 0">
-            <tr><td style="color:var(--accent)">BizDev</td><td>Pipeline, new buyers closed, meetings booked</td></tr>
-            <tr><td style="color:var(--green)">Client Rel</td><td>Buyer health, revenue retention, acceptance rate, open issues</td></tr>
-            <tr><td style="color:var(--blue)">Affiliates</td><td>EPC, traffic quality, compliance flags, fill rate</td></tr>
-          </table>
-          <div class="ft">Quick wins: onboarding checklists, stage definitions, weekly summary for Boris. Fix HubSpot adoption gaps.</div>
-        </div>
-        <div class="fs hi"><div class="ft"><strong>90 days — Prove it</strong><br>L10 is muscle memory. Boris has one dashboard. Playbooks in use. First automations live:</div>
-          <div style="display:flex;flex-wrap:wrap;gap:4px;margin:6px 0">
-            <span class="tag gn">Broken link → task</span>
-            <span class="tag gn">Volume drop → alert</span>
-            <span class="tag gn">Quality dip → flag</span>
-            <span class="tag gn">Deal stall → task</span>
-            <span class="tag gn">Renewal → workflow</span>
-            <span class="tag gn">Nightly summary → Slack</span>
-          </div>
-          <div class="ft">Data bridge roadmap scoped with CTO. Before/after visible.</div>
-        </div>
-      </div>
-      <div class="qt">"Operating rhythm first, standardization second, visibility third, data bridge last. Listen before I build, prove value before I ask for engineering resources."</div>
+      <ul>
+        <li>Shadow BizDev, Client Relations, Affiliates</li>
+        <li>Audit HubSpot: what's used, ignored, inconsistent across 26 users</li>
+        <li>Map existing processes vs gaps</li>
+        <li>Understand data landscape (platform vs QuickSight vs HubSpot)</li>
+        <li>Meet John Lambert (CTO) — scope what's technically possible</li>
+      </ul>
+      <p style="margin-top:8px;color:var(--red);font-weight:600">Change nothing yet.</p>
     </div>
   </div>
+
+  <!-- 60 DAYS -->
+  <div class="card col">
+    <div class="ct" onclick="tC(this)"><span style="color:var(--accent)">60 days</span> — Build rhythm</div>
+    <div class="cb">
+      <p><strong>L10 meetings live</strong> across all 3 teams. Weekly, scorecard-driven, 60 min.</p>
+      <div class="tl">Scorecards</div>
+      <table class="dt">
+        <tr><td style="color:var(--accent)">BizDev</td><td>Pipeline, new buyers closed, meetings booked</td></tr>
+        <tr><td style="color:var(--green)">Client Rel</td><td>Buyer health, revenue retention, acceptance rate, open issues</td></tr>
+        <tr><td style="color:var(--blue)">Affiliates</td><td>EPC, traffic quality, compliance flags, fill rate</td></tr>
+      </table>
+      <div class="tl">Quick wins</div>
+      <ul>
+        <li>Standardized onboarding checklists (buyers + publishers)</li>
+        <li>Pipeline stage definitions with exit criteria</li>
+        <li>Weekly consolidated summary for Boris</li>
+        <li>Fix HubSpot adoption gaps from migration</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 90 DAYS -->
+  <div class="card col">
+    <div class="ct" onclick="tC(this)"><span style="color:var(--green)">90 days</span> — Prove it</div>
+    <div class="cb">
+      <ul>
+        <li>L10 is muscle memory across all 3 teams</li>
+        <li>Boris has <strong>one dashboard</strong> — performance, risk, process compliance</li>
+        <li>Playbooks documented and in use</li>
+      </ul>
+      <div class="tl">First automations live</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 8px">
+        <span class="tag gn">Broken link → task</span>
+        <span class="tag gn">Volume drop → alert</span>
+        <span class="tag gn">Quality dip → flag</span>
+        <span class="tag gn">Deal stall → task</span>
+        <span class="tag gn">Renewal → workflow</span>
+        <span class="tag gn">Nightly summary → Slack</span>
+      </div>
+      <ul>
+        <li>Data bridge roadmap scoped with CTO</li>
+        <li>Before/after visible — can show concrete improvements</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="qt">"Operating rhythm first, standardization second, visibility third, data bridge last. Listen before I build, prove value before I ask for engineering resources."</div>
 
   <!-- TWO AXES -->
   <div class="card col">

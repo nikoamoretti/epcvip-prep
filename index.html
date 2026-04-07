@@ -276,16 +276,13 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
 <section id="plan">
   <div class="sl">Your game plan</div>
   <h2>The Operational Plan</h2>
-  <p class="si">This is what you're walking in to build. Know it cold.</p>
-
-  <div class="callout-box gold" style="margin:16px 0;padding:16px;background:rgba(212,165,116,0.08);border:1px solid rgba(212,165,116,0.15);border-radius:8px">
-    <p style="color:#e8c49a;font-family:'JetBrains Mono',monospace;font-size:1.1rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px">Key framing from recruiter</p>
-    <p style="color:#e6e1d8;margin:0">The team is already sold on your AI/tech side. What Valeriy needs to see is <strong>operational strength</strong>. Lead with rhythm, standardization, and accountability — the data bridge serves the ops goals, it's not the goal itself.</p>
-  </div>
+  <p class="si" style="margin-bottom:6px">Tap each card to expand. Know this cold.</p>
+  <p class="in" style="margin-bottom:16px">Recruiter says: team is sold on your AI/tech. Valeriy needs to see <strong>operational strength</strong>. Lead with rhythm and accountability — data bridge serves the ops goals.</p>
 
   <!-- 30/60/90 VISUAL TIMELINE -->
-  <div style="margin:24px 0">
-    <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;margin-bottom:16px;color:#e6e1d8">30 / 60 / 90 Day Timeline</h3>
+  <div class="card">
+    <div class="ct" onclick="tC(this)">30 / 60 / 90 Day Timeline</div>
+    <div class="cb">
 
     <!-- DAY 30 -->
     <div style="display:flex;gap:16px;margin-bottom:4px">
@@ -381,26 +378,27 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     </div>
   </div>
 
-  <!-- PRIORITY ORDER -->
-  <div style="margin:24px 0;padding:16px;background:rgba(212,165,116,0.06);border:1px solid rgba(212,165,116,0.1);border-radius:8px">
-    <p style="font-family:'JetBrains Mono',monospace;font-size:1.05rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#d4a574;margin-bottom:8px">Explicit priority order</p>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
-      <span style="padding:8px 16px;background:#d4a574;color:#08090d;border-radius:20px;font-size:1.3rem;font-weight:700">1. Operating rhythm</span>
-      <span style="color:rgba(230,225,216,0.3);font-size:1.6rem">→</span>
-      <span style="padding:8px 16px;background:rgba(91,184,174,0.15);border:1px solid rgba(91,184,174,0.2);color:#5bb8ae;border-radius:20px;font-size:1.3rem;font-weight:700">2. Standardization</span>
-      <span style="color:rgba(230,225,216,0.3);font-size:1.6rem">→</span>
-      <span style="padding:8px 16px;background:rgba(107,189,122,0.12);border:1px solid rgba(107,189,122,0.18);color:#6bbd7a;border-radius:20px;font-size:1.3rem;font-weight:700">3. Visibility</span>
-      <span style="color:rgba(230,225,216,0.3);font-size:1.6rem">→</span>
-      <span style="padding:8px 16px;background:rgba(139,126,200,0.12);border:1px solid rgba(139,126,200,0.18);color:#8b7ec8;border-radius:20px;font-size:1.3rem;font-weight:700">4. Data bridge</span>
+    </div>
+  </div>
+
+  <!-- PRIORITY ORDER - always visible, compact -->
+  <div style="padding:12px 16px;background:rgba(212,165,116,0.06);border:1px solid rgba(212,165,116,0.1);border-radius:8px;margin:10px 0">
+    <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center">
+      <span style="padding:6px 14px;background:#d4a574;color:#08090d;border-radius:20px;font-size:1.2rem;font-weight:700">1. Rhythm</span>
+      <span style="color:rgba(230,225,216,0.25);font-size:1.4rem">→</span>
+      <span style="padding:6px 14px;background:rgba(91,184,174,0.15);border:1px solid rgba(91,184,174,0.2);color:#5bb8ae;border-radius:20px;font-size:1.2rem;font-weight:700">2. Standardize</span>
+      <span style="color:rgba(230,225,216,0.25);font-size:1.4rem">→</span>
+      <span style="padding:6px 14px;background:rgba(107,189,122,0.12);border:1px solid rgba(107,189,122,0.18);color:#6bbd7a;border-radius:20px;font-size:1.2rem;font-weight:700">3. Visibility</span>
+      <span style="color:rgba(230,225,216,0.25);font-size:1.4rem">→</span>
+      <span style="padding:6px 14px;background:rgba(139,126,200,0.12);border:1px solid rgba(139,126,200,0.18);color:#8b7ec8;border-radius:20px;font-size:1.2rem;font-weight:700">4. Data bridge</span>
     </div>
   </div>
 
   <!-- TWO-AXIS FRAMEWORK -->
-  <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;margin:28px 0 16px;color:#e6e1d8">The Two-Axis Framework</h3>
-
-  <div style="display:grid;grid-template-columns:1fr;gap:16px">
-    <!-- AXIS 1 -->
-    <div style="background:#141620;border:1px solid rgba(91,184,174,0.12);border-radius:10px;padding:20px">
+  <div class="card">
+    <div class="ct" onclick="tC(this)">Two-Axis Framework — Help Teams + Give Boris Leverage</div>
+    <div class="cb">
+    <div style="background:rgba(91,184,174,0.04);border:1px solid rgba(91,184,174,0.12);border-radius:10px;padding:16px;margin-bottom:12px">
       <h4 style="font-size:1.5rem;font-weight:700;color:#5bb8ae;margin-bottom:14px">Axis 1: Help the Teams Perform Higher</h4>
 
       <p style="color:#e6e1d8;font-weight:700;font-size:1.35rem;margin:14px 0 6px">Data Bridge — Get platform data into HubSpot</p>
@@ -438,8 +436,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       </ul>
     </div>
 
-    <!-- AXIS 2 -->
-    <div style="background:#141620;border:1px solid rgba(212,165,116,0.12);border-radius:10px;padding:20px">
+    <div style="background:rgba(212,165,116,0.04);border:1px solid rgba(212,165,116,0.12);border-radius:10px;padding:16px">
       <h4 style="font-size:1.5rem;font-weight:700;color:#d4a574;margin-bottom:14px">Axis 2: Give Boris Leverage</h4>
       <p style="color:rgba(230,225,216,0.6);font-size:1.35rem;margin:0 0 12px">Boris has 9 direct reports across 3 departments. He needs to manage by exception, not by chasing updates.</p>
       <ul style="padding-left:18px;margin:0">
@@ -453,8 +450,13 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     </div>
   </div>
 
+    </div>
+  </div>
+
   <!-- ROI LEVERS -->
-  <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;margin:28px 0 16px;color:#e6e1d8">Innovative ROI Levers (If He Asks)</h3>
+  <div class="card">
+    <div class="ct" onclick="tC(this)">ROI Levers — If He Asks About Innovation</div>
+    <div class="cb">
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px">
     <div style="padding:14px;background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:8px"><p style="color:#d4a574;font-weight:700;font-size:1.35rem;margin:0 0 4px">Smart Matching</p><p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0">Route leads to the buyer most likely to <em>fund</em> that profile, not just the highest bidder. Surface conversion-by-source data for Client Relations.</p></div>
     <div style="padding:14px;background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:8px"><p style="color:#5bb8ae;font-weight:700;font-size:1.35rem;margin:0 0 4px">Exclusive vs Shared</p><p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0">Show buyers their conversion on exclusive vs shared — some win paying 2x for 3x conversion. Build the dashboard that makes this visible per buyer.</p></div>
@@ -468,8 +470,13 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     <p style="color:#e6e1d8;font-style:italic;font-size:1.4rem;margin:4px 0">"The biggest ROI lever is the data that already exists in the platform but isn't reaching the revenue teams. If Client Relations can see conversion rate by lead source, they can talk exclusive vs shared pricing. If they can see return reasons categorized, they can work with affiliates to fix targeting. The platform already knows which leads convert — the innovation is making that intelligence actionable."</p>
   </div>
 
+    </div>
+  </div>
+
   <!-- DATA BRIDGE: HOW IT ACTUALLY WORKS -->
-  <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;margin:32px 0 16px;color:#e6e1d8">The Data Bridge — How You'd Build It</h3>
+  <div class="card">
+    <div class="ct" onclick="tC(this)">Data Bridge — How You'd Build It (Scrappy Version)</div>
+    <div class="cb">
 
   <!-- FLOW DIAGRAM -->
   <div style="background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:20px;margin-bottom:16px">
@@ -499,9 +506,14 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     </div>
   </div>
 
+    </div>
+  </div>
+
   <!-- HUBSPOT SCHEMA -->
-  <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;margin:28px 0 16px;color:#e6e1d8">HubSpot Schema by Team</h3>
-  <p style="color:rgba(230,225,216,0.5);font-size:1.35rem;margin-bottom:16px">Every buyer and publisher is already a Company record. You add custom property groups and custom objects so account managers see everything without leaving HubSpot.</p>
+  <div class="card">
+    <div class="ct" onclick="tC(this)">HubSpot Schema — What Each Team Sees</div>
+    <div class="cb">
+    <p style="color:rgba(230,225,216,0.5);font-size:1.3rem;margin-bottom:12px">Buyers and publishers are already Company records. You add custom property groups + a Campaign custom object.</p>
 
   <!-- CLIENT RELATIONS SCHEMA -->
   <div style="background:#141620;border:1px solid rgba(91,184,174,0.12);border-top:3px solid #5bb8ae;border-radius:10px;padding:20px;margin-bottom:14px">
@@ -572,6 +584,9 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       <tr><td style="padding:8px 10px;color:#d4a574;font-weight:600">L10 Summary</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">This week's key issues from all 3 L10s, rocks on/off track, scorecard red items</td></tr>
     </table>
     <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-top:10px">He manages by exception. Red/yellow comes to him. Green doesn't.</p>
+  </div>
+
+    </div>
   </div>
 
 </section>

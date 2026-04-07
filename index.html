@@ -94,6 +94,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
   <a href="#checklist" class="active">Checklist</a>
   <a href="#valeriy">Valeriy</a>
   <a href="#company">Company</a>
+  <a href="#plan">Plan</a>
   <a href="#qa">Q&amp;A</a>
   <a href="#pingpost">Ping-Post</a>
   <a href="#org">Org</a>
@@ -465,6 +466,112 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
   <div style="margin:14px 0;padding:14px 16px;background:rgba(212,165,116,0.06);border-left:3px solid #d4a574;border-radius:0 6px 6px 0;position:relative">
     <p style="position:absolute;top:-8px;left:12px;font-family:'JetBrains Mono',monospace;font-size:0.9rem;font-weight:600;letter-spacing:0.1em;color:#d4a574;background:#0e1018;padding:0 6px">SAY</p>
     <p style="color:#e6e1d8;font-style:italic;font-size:1.4rem;margin:4px 0">"The biggest ROI lever is the data that already exists in the platform but isn't reaching the revenue teams. If Client Relations can see conversion rate by lead source, they can talk exclusive vs shared pricing. If they can see return reasons categorized, they can work with affiliates to fix targeting. The platform already knows which leads convert — the innovation is making that intelligence actionable."</p>
+  </div>
+
+  <!-- DATA BRIDGE: HOW IT ACTUALLY WORKS -->
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;margin:32px 0 16px;color:#e6e1d8">The Data Bridge — How You'd Build It</h3>
+
+  <!-- FLOW DIAGRAM -->
+  <div style="background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:20px;margin-bottom:16px">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:1.05rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#d4a574;margin-bottom:12px">The flow</p>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:16px">
+      <span style="padding:10px 16px;background:rgba(139,126,200,0.12);border:1px solid rgba(139,126,200,0.18);color:#8b7ec8;border-radius:8px;font-size:1.3rem;font-weight:700">Platform DB</span>
+      <span style="color:rgba(230,225,216,0.3);font-size:1.8rem">→</span>
+      <span style="padding:10px 16px;background:rgba(212,165,116,0.1);border:1px solid rgba(212,165,116,0.15);color:#d4a574;border-radius:8px;font-size:1.3rem;font-weight:700">Your script</span>
+      <span style="color:rgba(230,225,216,0.3);font-size:1.8rem">→</span>
+      <span style="padding:10px 16px;background:rgba(91,184,174,0.12);border:1px solid rgba(91,184,174,0.18);color:#5bb8ae;border-radius:8px;font-size:1.3rem;font-weight:700">HubSpot API</span>
+      <span style="color:rgba(230,225,216,0.3);font-size:1.8rem">→</span>
+      <span style="padding:10px 16px;background:rgba(107,189,122,0.12);border:1px solid rgba(107,189,122,0.18);color:#6bbd7a;border-radius:8px;font-size:1.3rem;font-weight:700">Custom properties on records</span>
+    </div>
+    <p style="color:rgba(230,225,216,0.5);font-size:1.25rem;margin:0"><strong style="color:#e6e1d8">Your one ask to engineering:</strong> "Can I get read access to a DB replica or a nightly export to S3?" You build everything else.</p>
+  </div>
+
+  <!-- SCRAPPY TIMELINE -->
+  <div style="background:#141620;border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:20px;margin-bottom:20px">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:1.05rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#5bb8ae;margin-bottom:12px">Scrappy timeline — no engineering dependency</p>
+    <div style="display:grid;grid-template-columns:64px 1fr;gap:4px 12px;font-size:1.3rem">
+      <span style="color:#d4a574;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Day 1</span><span style="color:rgba(230,225,216,0.6)">Find out what reports already exist and who pulls them for Boris</span>
+      <span style="color:#d4a574;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Day 3</span><span style="color:rgba(230,225,216,0.6)">Get those reports as CSVs — even manual is fine</span>
+      <span style="color:#d4a574;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Day 5</span><span style="color:rgba(230,225,216,0.6)">Vibe code a script: read CSV → transform → push to HubSpot API</span>
+      <span style="color:#5bb8ae;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Week 2</span><span style="color:rgba(230,225,216,0.6)">Automate: script runs on a schedule, reads from S3/shared drive</span>
+      <span style="color:#5bb8ae;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Week 3</span><span style="color:rgba(230,225,216,0.6)">Add health score logic, anomaly detection, alerting</span>
+      <span style="color:#6bbd7a;font-weight:700;font-family:'JetBrains Mono',monospace;font-size:1.1rem">Week 4</span><span style="color:rgba(230,225,216,0.6)">Show Boris his dashboard with real data. Value proven. Engineering buy-in earned.</span>
+    </div>
+  </div>
+
+  <!-- HUBSPOT SCHEMA -->
+  <h3 style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;margin:28px 0 16px;color:#e6e1d8">HubSpot Schema by Team</h3>
+  <p style="color:rgba(230,225,216,0.5);font-size:1.35rem;margin-bottom:16px">Every buyer and publisher is already a Company record. You add custom property groups and custom objects so account managers see everything without leaving HubSpot.</p>
+
+  <!-- CLIENT RELATIONS SCHEMA -->
+  <div style="background:#141620;border:1px solid rgba(91,184,174,0.12);border-top:3px solid #5bb8ae;border-radius:10px;padding:20px;margin-bottom:14px">
+    <h4 style="font-size:1.45rem;font-weight:700;color:#5bb8ae;margin-bottom:4px">Client Relations — Buyer Company Record</h4>
+    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-bottom:14px">What the account manager sees when they open a buyer's record</p>
+    <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Property Group</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Fields</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Source</th></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Health</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Health score (green/yellow/red), risk flags, last issue date</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Calculated</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Volume</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Leads delivered today / 7d / 30d, delivered vs contracted, volume by campaign</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Quality</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Acceptance rate, return rate, return reasons breakdown, duplicate rate</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Conversion</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Funded loan rate, revenue per lead, cost per funded loan</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Pricing</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Avg bid price, bid win rate, exclusive vs shared mix</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Revenue</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Revenue to EPCVIP (MTD, trend), MoM change %</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
+      <tr><td style="padding:8px 10px;color:#5bb8ae;font-weight:600;vertical-align:top">Relationship</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Contract expiration, last contact, open issues count, pipeline stage</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
+    </table>
+    <div style="margin-top:12px;padding:10px 14px;background:rgba(91,184,174,0.06);border:1px solid rgba(91,184,174,0.1);border-radius:6px">
+      <p style="color:#5bb8ae;font-size:1.2rem;margin:0"><strong>Custom Object: "Campaign"</strong> — associated to Company. Each buyer runs multiple campaigns (e.g. "Personal loans, CA+TX, 620+, $45/lead, exclusive"). One record per campaign with its own volume, acceptance rate, and status. This is how you flag "Campaign 3 is dying" while Campaigns 1 and 2 are fine.</p>
+    </div>
+    <div style="margin-top:8px;padding:10px 14px;background:rgba(91,184,174,0.06);border:1px solid rgba(91,184,174,0.1);border-radius:6px">
+      <p style="color:#5bb8ae;font-size:1.2rem;margin:0"><strong>Workflows triggered:</strong> Health → yellow = task to account manager. Health → red = task + Slack to Boris. Volume drop &gt;20% on any campaign = alert. Contract expiring in 30d = renewal prep task.</p>
+    </div>
+  </div>
+
+  <!-- AFFILIATE RELATIONS SCHEMA -->
+  <div style="background:#141620;border:1px solid rgba(139,126,200,0.12);border-top:3px solid #8b7ec8;border-radius:10px;padding:20px;margin-bottom:14px">
+    <h4 style="font-size:1.45rem;font-weight:700;color:#8b7ec8;margin-bottom:4px">Affiliate Relations — Publisher Company Record</h4>
+    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-bottom:14px">What the affiliate manager sees when they open a publisher's record</p>
+    <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Property Group</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Fields</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Source</th></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Quality</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Quality score (green/yellow/red), acceptance rate, return rate, fraud/duplicate rate</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Calculated</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Performance</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">EPC (overall + by vertical), EPL, CTR, fill rate, conversion rate</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Volume</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Total leads (daily/weekly/monthly), leads by vertical, volume trend</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Compliance</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Compliance status (clear/flagged/suspended), last audit date, TCPA flags, open violations</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform + Legal</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Revenue</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Revenue to publisher (payouts), revenue to EPCVIP, margin, pricing model (CPC/CPA/rev-share)</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform</td></tr>
+      <tr><td style="padding:8px 10px;color:#8b7ec8;font-weight:600;vertical-align:top">Profile</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Traffic type (email/display/PPC/social/push), verticals they run, tier (A/B/C), payment terms</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
+    </table>
+    <div style="margin-top:12px;padding:10px 14px;background:rgba(139,126,200,0.06);border:1px solid rgba(139,126,200,0.1);border-radius:6px">
+      <p style="color:#8b7ec8;font-size:1.2rem;margin:0"><strong>Workflows triggered:</strong> Acceptance rate drops below threshold = auto-flag for review. Inactive &gt;X days = task to check in. Compliance flag from legal = task with context. Weekly performance digest per affiliate manager's portfolio → auto Slack/email.</p>
+    </div>
+  </div>
+
+  <!-- BIZDEV SCHEMA -->
+  <div style="background:#141620;border:1px solid rgba(212,165,116,0.12);border-top:3px solid #d4a574;border-radius:10px;padding:20px;margin-bottom:14px">
+    <h4 style="font-size:1.45rem;font-weight:700;color:#d4a574;margin-bottom:4px">BizDev — Prospect / New Buyer Pipeline</h4>
+    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-bottom:14px">What the BD rep needs to pitch and close new lenders</p>
+    <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Property Group</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Fields</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Source</th></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#d4a574;font-weight:600;vertical-align:top">Market Data</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Available lead volume in prospect's verticals, avg conversion rate for similar buyers, avg bid prices in their category</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">Platform (aggregated)</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#d4a574;font-weight:600;vertical-align:top">Deal</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Pipeline stage, deal value (est. monthly rev), close date, next action, owner</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#d4a574;font-weight:600;vertical-align:top">Prospect Intel</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Lending license states, verticals, current lead sources (if known), conference history</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
+      <tr><td style="padding:8px 10px;color:#d4a574;font-weight:600;vertical-align:top">Onboarding</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Integration status, test leads sent, go-live date, handoff to Client Relations (date + checklist)</td><td style="padding:8px 10px;color:rgba(230,225,216,0.35)">HubSpot native</td></tr>
+    </table>
+    <div style="margin-top:12px;padding:10px 14px;background:rgba(212,165,116,0.06);border:1px solid rgba(212,165,116,0.1);border-radius:6px">
+      <p style="color:#d4a574;font-size:1.2rem;margin:0"><strong>Key unlock:</strong> BizDev can pull live market data into pitches — "We're currently delivering 2,400 personal loan leads/day in your states with a 71% acceptance rate across similar buyers." That's a killer pitch. Right now they can't do this without asking someone to pull a report.</p>
+    </div>
+  </div>
+
+  <!-- BORIS DASHBOARD -->
+  <div style="background:#141620;border:1px solid rgba(232,196,154,0.15);border-top:3px solid #e8c49a;border-radius:10px;padding:20px;margin-bottom:14px">
+    <h4 style="font-size:1.45rem;font-weight:700;color:#e8c49a;margin-bottom:4px">Boris's Dashboard — One View</h4>
+    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-bottom:14px">What the CRO sees every morning</p>
+    <table style="width:100%;border-collapse:collapse;font-size:1.2rem">
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Section</th><th style="text-align:left;padding:8px 10px;font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(230,225,216,0.35)">Shows</th></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#c9635e;font-weight:600">Red Flags</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Buyers at risk (health yellow/red), publishers flagged, deals stalled, broken links</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#6bbd7a;font-weight:600">Revenue</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Total revenue MTD, by vertical, by buyer (top 10), by affiliate (top 10), MoM trend</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#5bb8ae;font-weight:600">Pipeline</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">BizDev pipeline by stage, new buyers closed this month, projected close value</td></tr>
+      <tr style="border-bottom:1px solid rgba(255,255,255,0.06)"><td style="padding:8px 10px;color:#8b7ec8;font-weight:600">Team Activity</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">Tasks completed, meetings held, issues resolved — per team, per person</td></tr>
+      <tr><td style="padding:8px 10px;color:#d4a574;font-weight:600">L10 Summary</td><td style="padding:8px 10px;color:rgba(230,225,216,0.6)">This week's key issues from all 3 L10s, rocks on/off track, scorecard red items</td></tr>
+    </table>
+    <p style="color:rgba(230,225,216,0.4);font-size:1.2rem;margin-top:10px">He manages by exception. Red/yellow comes to him. Green doesn't.</p>
   </div>
 
 </section>

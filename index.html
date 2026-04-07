@@ -292,13 +292,13 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     <div class="ct" onclick="tC(this)"><span style="color:var(--orange)">30 days</span> — Listen &amp; map</div>
     <div class="cb">
       <ul>
-        <li>Shadow BizDev, Client Relations, Affiliates</li>
-        <li>Audit HubSpot: what's used, ignored, inconsistent across 26 users</li>
-        <li>Map existing processes vs gaps</li>
-        <li>Understand data landscape (platform vs QuickSight vs HubSpot)</li>
-        <li>Meet John Lambert (CTO) — scope what's technically possible</li>
+        <li><strong>Shadow each team.</strong> Not observe from a distance — sit with reps, watch how they actually work, ask what slows them down, what they wish they had</li>
+        <li><strong>Build relationships with team leads.</strong> Kirill, Adam, Michelle — these are the people who know the truth. I need their trust before I can change anything.</li>
+        <li><strong>Audit HubSpot.</strong> What's being used, what's ignored, where people are doing things differently. Not to judge — to understand what the migration left behind.</li>
+        <li><strong>Map the data landscape.</strong> What lives in the platform, what's in QuickSight, what makes it into HubSpot, where are the gaps.</li>
+        <li><strong>Meet John Lambert (CTO).</strong> Start the relationship for the eventual data bridge. Understand what's technically possible and what engineering bandwidth looks like.</li>
       </ul>
-      <p style="margin-top:8px;color:var(--red);font-weight:600">Change nothing yet.</p>
+      <p style="margin-top:8px;color:var(--red);font-weight:600">Change nothing. Earn trust first.</p>
     </div>
   </div>
 
@@ -306,27 +306,23 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
   <div class="card col">
     <div class="ct" onclick="tC(this)"><span style="color:var(--accent)">60 days</span> — Install the operating system</div>
     <div class="cb">
-      <div class="tl">Meetings</div>
+      <div class="tl">Operating rhythm</div>
       <ul>
-        <li>Design and launch <strong>weekly L10 meeting</strong> for each team (3 total)</li>
-        <li>Define scorecard metrics per team — automate data pull so numbers are ready before each meeting</li>
+        <li>Design and launch <strong>weekly L10</strong> for each team — co-designed with each team lead, not imposed top-down</li>
+        <li>Work with each department head to define <strong>their scorecard metrics</strong> — the numbers they believe matter, then pressure-test together</li>
+        <li>Automate data pull so numbers are ready before each meeting — the meeting is for solving, not reporting</li>
       </ul>
-      <table class="dt">
-        <tr><td style="color:var(--accent)">BizDev</td><td>Pipeline, new buyers closed, meetings booked</td></tr>
-        <tr><td style="color:var(--green)">Client Rel</td><td>Buyer health, revenue retention, acceptance rate, open issues</td></tr>
-        <tr><td style="color:var(--blue)">Affiliates</td><td>EPC, traffic quality, compliance flags, fill rate</td></tr>
-      </table>
-      <div class="tl">HubSpot fixes (no engineering needed)</div>
+      <div class="tl">Standardization (based on 30-day audit findings)</div>
       <ul>
-        <li>Create <strong>onboarding checklists</strong> in HubSpot for new buyers and new publishers — so every onboarding follows the same steps</li>
-        <li>Define <strong>pipeline stages with exit criteria</strong> — everyone agrees what "Discovery" vs "Proposal" means</li>
-        <li>Fix inconsistencies from migration — make 26 users use HubSpot the same way</li>
+        <li>Whatever the audit surfaces — gaps in process, inconsistencies across users, things that exist on paper but aren't followed — fix the highest-impact ones first</li>
+        <li>Approach: sit with each team lead, show them what I found, ask "is this how it should work?", co-build the fix. I'm not coming in with a binder. I'm building it with the people who'll use it.</li>
+        <li>The goal is that an average organized new hire can perform — not just the top rep who'd figure it out anyway</li>
       </ul>
       <div class="tl">First data work (scrappy, no engineering)</div>
       <ul>
-        <li>Get existing reports as CSVs from whoever pulls them today</li>
-        <li>Write a script to push key metrics into HubSpot custom properties</li>
-        <li>Build Boris a <strong>weekly email/Slack summary</strong> across all 3 teams</li>
+        <li>Find whoever pulls reports today and get access to the same data</li>
+        <li>Start pushing key metrics into HubSpot — scrappy scripts, manual if needed</li>
+        <li>Build Boris a <strong>consolidated weekly summary</strong> across all 3 teams so he stops chasing updates</li>
       </ul>
     </div>
   </div>
@@ -646,9 +642,9 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     <div class="qi" onclick="tQ(this)">
       <div class="qq">What would you do in your first 30/60/90 days?</div>
       <div class="qa">
-        <p><strong>30 — Listen.</strong> Shadow all 3 teams. Audit HubSpot. Map what exists vs what should exist. Understand the data landscape. Meet the CTO. Change nothing.</p>
-        <p><strong>60 — Install the operating system.</strong> L10s running across all 3 teams with automated scorecards. HubSpot cleaned up — onboarding checklists, stage definitions, 26 users doing it the same way. Start pushing data into HubSpot myself — scrappy scripts, no engineering dependency. Boris gets a weekly summary.</p>
-        <p><strong>90 — Automations and insights live.</strong> If-this-then-that logic running: broken links, volume drops, quality dips, stalled deals all trigger the right action to the right person. Health scores on every buyer and publisher record. Boris has one dashboard. Playbooks documented so new hires can perform without tribal knowledge. Data bridge roadmap scoped with the CTO for the proper build.</p>
+        <p><strong>30 — Listen.</strong> Shadow all 3 teams. Build trust with team leads. Audit HubSpot. Map the data landscape. Change nothing — earn the right to change things.</p>
+        <p><strong>60 — Install the operating system.</strong> Co-design L10s with each team lead — their metrics, their cadence, not imposed from above. Fix whatever the audit surfaces, starting with highest-impact gaps. Start pushing data into HubSpot myself — scrappy, no engineering dependency. Boris gets a consolidated weekly summary.</p>
+        <p><strong>90 — Automations and insights live.</strong> If-this-then-that logic running: the system tells people what to do instead of making them guess. Health scores on records. Boris has one dashboard. Playbooks documented so the average new hire can perform. Data bridge roadmap scoped with CTO for the proper build.</p>
         <div class="qt">"Listen for 30 days, then build the operating rhythm and start pushing data into HubSpot myself. By day 90 the automations are running, Boris has one dashboard, and I've earned the right to ask engineering for a proper data pipeline."</div>
         <p class="in">Don't present as a slide deck. "The honest answer is the plan is the product of the audit. But the framework is..." and let him pull.</p>
       </div>

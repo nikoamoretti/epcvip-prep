@@ -354,21 +354,28 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
   <div class="card col">
     <div class="ct" onclick="tC(this)">Data bridge — how you'd build it</div>
     <div class="cb">
+      <div class="tl">The flow</div>
       <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:center;margin-bottom:12px">
-        <span class="tag bl">Platform DB</span><span style="color:var(--muted)">→</span>
-        <span class="tag y">Your script</span><span style="color:var(--muted)">→</span>
-        <span class="tag gn">HubSpot API</span><span style="color:var(--muted)">→</span>
-        <span class="tag" style="color:var(--text);border-color:var(--bl)">Custom properties</span>
+        <span class="tag bl">Platform DB (read)</span><span style="color:var(--muted)">→</span>
+        <span class="tag y">Your Python script</span><span style="color:var(--muted)">→</span>
+        <span class="tag gn">HubSpot API (write)</span><span style="color:var(--muted)">→</span>
+        <span class="tag" style="color:var(--text);border-color:var(--bl)">Data on Company records</span>
       </div>
-      <p><strong>One ask to engineering:</strong> read-only DB replica or nightly export to S3. You build everything else.</p>
-      <div class="tl">Scrappy timeline</div>
+      <table class="dt">
+        <tr><th>Piece</th><th>How</th></tr>
+        <tr><td>Source</td><td>Ask engineering for ONE thing: read-only DB replica access, or a nightly data export to S3</td></tr>
+        <tr><td>Script</td><td>Python — reads source, transforms (calculates health scores, flags anomalies), writes to HubSpot via their REST API (<code>PUT /crm/v3/objects/companies/{id}</code>)</td></tr>
+        <tr><td>Hosting</td><td>AWS Lambda (they already use it) or a GitHub Action on a cron schedule — both free/near-free, runs every 15 min or hourly</td></tr>
+        <tr><td>HubSpot side</td><td>Custom property groups on Company records + a "Campaign" custom object. Workflows trigger tasks/alerts when values change.</td></tr>
+      </table>
+      <div class="tl">Scrappy timeline — no eng dependency</div>
       <div class="flow">
         <div class="fs"><div class="ft"><strong>Day 1</strong> — Find what reports exist, who pulls them for Boris</div></div>
         <div class="fs"><div class="ft"><strong>Day 3</strong> — Get those reports as CSVs</div></div>
-        <div class="fs"><div class="ft"><strong>Day 5</strong> — Vibe code script: CSV → transform → push to HubSpot API</div></div>
-        <div class="fs hi"><div class="ft"><strong>Week 2</strong> — Automate: runs on schedule from S3</div></div>
-        <div class="fs hi"><div class="ft"><strong>Week 3</strong> — Add health scores, anomaly detection</div></div>
-        <div class="fs hi"><div class="ft"><strong>Week 4</strong> — Boris sees real data in his dashboard. Value proven.</div></div>
+        <div class="fs"><div class="ft"><strong>Day 5</strong> — Vibe code Python script: read CSV → transform → write to HubSpot API</div></div>
+        <div class="fs hi"><div class="ft"><strong>Week 2</strong> — Automate: script runs on Lambda/cron from S3</div></div>
+        <div class="fs hi"><div class="ft"><strong>Week 3</strong> — Add health scores, anomaly detection, alerting</div></div>
+        <div class="fs hi"><div class="ft"><strong>Week 4</strong> — Boris sees real data in his dashboard. Value proven. Eng buy-in earned.</div></div>
       </div>
     </div>
   </div>

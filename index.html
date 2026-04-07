@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPCVIP CEO Interview — Briefing</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── Foundation ─────────────────────────────────── */
+:root {
+  --bg-deep: #08090d;
+  --bg-primary: #0e1018;
+  --bg-card: #141620;
+  --bg-card-hover: #1a1d2e;
+  --bg-elevated: #1e2136;
+  --border: rgba(212,165,116,0.08);
+  --border-active: rgba(212,165,116,0.25);
+  --text-primary: #e6e1d8;
+  --text-secondary: rgba(230,225,216,0.6);
+  --text-tertiary: rgba(230,225,216,0.35);
+  --text-dim: rgba(230,225,216,0.2);
+  --accent: #d4a574;
+  --accent-bright: #e8c49a;
+  --accent-glow: rgba(212,165,116,0.08);
+  --accent-glow-strong: rgba(212,165,116,0.15);
+  --teal: #5bb8ae;
+  --teal-dim: rgba(91,184,174,0.12);
+  --red-soft: #c9635e;
+  --red-dim: rgba(201,99,94,0.1);
+  --green-soft: #6bbd7a;
+  --green-dim: rgba(107,189,122,0.1);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212,165,116,0.15) transparent;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-deep);
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 10%, rgba(212,165,116,0.03) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 90%, rgba(91,184,174,0.02) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(212,165,116,0.15); border-radius: 3px; }
+
+/* ── Header ─────────────────────────────────────── */
+.briefing-header {
+  position: relative;
+  z-index: 1;
+  padding: 32px 20px 28px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(212,165,116,0.04) 0%, transparent 100%);
+}
+
+.header-classification {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  padding: 5px 12px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(212,165,116,0.12);
+  border-radius: 4px;
+}
+
+.header-classification::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.header-title {
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 7vw, 4.8rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.header-title em {
+  color: var(--accent);
+  font-style: normal;
+}
+
+.header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.meta-chip.urgent {
+  color: var(--accent-bright);
+  border-color: rgba(212,165,116,0.2);
+  background: var(--accent-glow);
+}
+
+/* ── Sticky Nav ─────────────────────────────────── */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,9,13,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.sticky-nav::-webkit-scrollbar { display: none; }
+
+.nav-track {
+  display: flex;
+  gap: 0;
+  min-width: max-content;
+}
+
+.nav-btn {
+  padding: 12px 16px;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--text-tertiary);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s var(--ease);
+}
+
+.nav-btn:hover { color: var(--text-secondary); }
+.nav-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Sections ───────────────────────────────────── */
+.prep-section {
+  position: relative;
+  z-index: 1;
+  margin: 12px 12px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.section-header:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-active);
+}
+
+.section-header.open {
+  border-radius: var(--radius) var(--radius) 0 0;
+  border-bottom-color: transparent;
+  background: var(--bg-card);
+}
+
+.section-icon {
+  flex-shrink: 0;
+  width: 36px; height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  background: var(--accent-glow);
+  border: 1px solid rgba(212,165,116,0.1);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+}
+
+.section-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-label h2 {
+  font-family: var(--sans);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.section-label p {
+  font-size: 1.2rem;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.section-chevron {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  color: var(--text-dim);
+  transition: transform 0.3s var(--ease);
+}
+
+.section-header.open .section-chevron { transform: rotate(180deg); }
+
+.section-body {
+  display: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 4px 16px 20px;
+  animation: slideDown 0.25s var(--ease);
+}
+
+.section-body.visible { display: block; }
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Content Typography ─────────────────────────── */
+.section-body h3 {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 24px 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-body h3:first-child { margin-top: 12px; }
+
+.section-body h4 {
+  font-family: var(--sans);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--accent-bright);
+  margin: 20px 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.section-body p {
+  color: var(--text-secondary);
+  font-size: 1.45rem;
+  line-height: 1.65;
+  margin: 8px 0;
+}
+
+.section-body p strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.section-body ul, .section-body ol {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.section-body li {
+  color: var(--text-secondary);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 6px 0;
+}
+
+.section-body li strong {
+  color: var(--text-primary);
+}
+
+/* ── Q&A Cards ──────────────────────────────────── */
+.qa-card {
+  margin: 14px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.qa-question {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--bg-elevated);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.qa-question:hover { background: rgba(30,33,54,0.8); }
+
+.qa-q-marker {
+  flex-shrink: 0;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  width: 24px;
+  text-align: center;
+}
+
+.qa-q-text {
+  flex: 1;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.qa-chevron {
+  flex-shrink: 0;
+  width: 16px; height: 16px;
+  color: var(--text-dim);
+  transition: transform 0.25s var(--ease);
+}
+
+.qa-card.open .qa-chevron { transform: rotate(180deg); }
+
+.qa-answer {
+  display: none;
+  padding: 16px 16px 16px 52px;
+  border-top: 1px solid var(--border);
+}
+
+.qa-card.open .qa-answer { display: block; animation: slideDown 0.2s var(--ease); }
+
+/* ── Blockquotes ────────────────────────────────── */
+.script-line {
+  position: relative;
+  margin: 12px 0;
+  padding: 14px 16px;
+  background: var(--accent-glow);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 1.4rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.script-line::before {
+  content: 'SAY';
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: var(--bg-card);
+  padding: 0 6px;
+}
+
+/* ── Warning / Tip Boxes ────────────────────────── */
+.callout {
+  margin: 14px 0;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 1.35rem;
+  line-height: 1.55;
+}
+
+.callout-warn {
+  background: var(--red-dim);
+  border: 1px solid rgba(201,99,94,0.15);
+  color: var(--red-soft);
+}
+
+.callout-tip {
+  background: var(--teal-dim);
+  border: 1px solid rgba(91,184,174,0.12);
+  color: var(--teal);
+}
+
+.callout-gold {
+  background: var(--accent-glow);
+  border: 1px solid rgba(212,165,116,0.12);
+  color: var(--accent-bright);
+}
+
+.callout strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* ── Data Table ─────────────────────────────────── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 1.3rem;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 10px 12px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.data-table td:first-child {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.data-table tr:last-child td { border-bottom: none; }
+
+/* ── Checklist ──────────────────────────────────── */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.4rem;
+}
+
+.checklist li:last-child { border-bottom: none; }
+
+.check-box {
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+  border: 2px solid var(--border-active);
+  border-radius: 4px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.15s var(--ease);
+  margin-top: 1px;
+}
+
+.check-box:hover { border-color: var(--accent); background: var(--accent-glow); }
+
+.check-box.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.check-box.checked::after {
+  content: '';
+  width: 10px; height: 6px;
+  border-left: 2px solid var(--bg-deep);
+  border-bottom: 2px solid var(--bg-deep);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.check-box.checked + span {
+  text-decoration: line-through;
+  color: var(--text-tertiary);
+}
+
+/* ── Org Card ───────────────────────────────────── */
+.person-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  margin: 8px 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.person-avatar {
+  flex-shrink: 0;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--bg-deep);
+}
+
+.person-info h5 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.person-info p {
+  font-size: 1.2rem;
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+/* ── Marketplace Diagram ────────────────────────── */
+.flow-diagram {
+  margin: 16px 0;
+  padding: 20px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.flow-diagram .highlight { color: var(--accent-bright); font-weight: 600; }
+.flow-diagram .teal { color: var(--teal); }
+
+/* ── Layer Strategy ─────────────────────────────── */
+.layer-stack {
+  margin: 14px 0;
+}
+
+.layer-item {
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  background: var(--bg-elevated);
+}
+
+.layer-item:first-child { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+.layer-item:last-child { border-bottom: 1px solid var(--border); border-radius: 0 0 var(--radius-sm) var(--radius-sm); }
+
+.layer-label {
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.layer-item p {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+/* ── Counter Badge ──────────────────────────────── */
+.count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border-radius: 4px;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (min-width: 700px) {
+  .briefing-header { padding: 48px 32px 40px; }
+  .prep-section { margin: 16px 24px 0; }
+  .section-header { padding: 20px 24px; }
+  .section-body { padding: 4px 24px 28px; }
+  .qa-answer { padding-left: 60px; }
+  .sticky-nav { padding: 0 24px; }
+}
+
+@media (min-width: 1000px) {
+  body { max-width: 860px; margin: 0 auto; }
+  .briefing-header { padding: 60px 0 48px; }
+  .prep-section { margin: 16px 0 0; }
+  .sticky-nav { padding: 0; border-radius: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ HEADER ═══════ -->
+<header class="briefing-header">
+  <div class="header-classification">Final Round Briefing</div>
+  <h1 class="header-title">EPCVIP &mdash; <em>CEO&nbsp;Interview</em></h1>
+  <div class="header-meta">
+    <span class="meta-chip urgent">Tue Apr 8, 2026</span>
+    <span class="meta-chip">Valeriy Zeltser, CEO</span>
+    <span class="meta-chip">RevOps Role</span>
+    <span class="meta-chip">Reports to Boris (CRO)</span>
+  </div>
+</header>
+
+<!-- ═══════ STICKY NAV ═══════ -->
+<nav class="sticky-nav">
+  <div class="nav-track">
+    <button class="nav-btn active" data-target="checklist">Checklist</button>
+    <button class="nav-btn" data-target="ceo">CEO</button>
+    <button class="nav-btn" data-target="company">Company</button>
+    <button class="nav-btn" data-target="answers">Answers</button>
+    <button class="nav-btn" data-target="questions">Ask Him</button>
+    <button class="nav-btn" data-target="reference">Reference</button>
+    <button class="nav-btn" data-target="donts">Don'ts</button>
+  </div>
+</nav>
+
+<!-- ═══════ CHECKLIST ═══════ -->
+<section class="prep-section" id="checklist">
+  <div class="section-header open" onclick="toggleSection(this)">
+    <div class="section-icon">&#10003;</div>
+    <div class="section-label">
+      <h2>Day-of Checklist</h2>
+      <p>Review before you walk in</p>
+    </div>
+    <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+  </div>
+  <div class="section-body visible">
+    <ul class="checklist">
+      <li><div class="check-box" onclick="this.classList.toggle('checked')"></div><span>Re-read the Round 1 & 2 Recap (what they asked, what you said, watch-outs)</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked')"></div><span>Review Valeriy Zeltser's LinkedIn</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked')"></div><span>Review Boris Bershadsky's recent LinkedIn posts</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked')"></div><span>Know the org chart cold</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked')"></div><span>Have 2-3 EPCVIP-specific data points ready to drop naturally</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked')"></div><span>Same dress & energy as Round 2 &mdash; don't shift gears</span></li>
+      <li><div class="check-box" onclick="this.classList.toggle('checked')"></div><span>This is a <strong>conversation</strong>, not a presentation. Match his energy.</span></li>
+    </ul>
+
+    <div class="callout callout-gold">
+      <strong>Key Insight from Recruiter</strong>
+      The team is already sold on your AI/tech side. What Valeriy needs to see is <strong>operational strength</strong>. Lead with rhythm, standardization, and accountability &mdash; not the data bridge.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CEO PROFILE ═══════ -->
+<section class="prep-section" id="ceo">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon">&#9670;</div>
+    <div class="section-label">
+      <h2>Valeriy Zeltser &mdash; Who He Is</h2>
+      <p>Founder & CEO. The guy who literally wrote the code.</p>
+    </div>
+    <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+  </div>
+  <div class="section-body">
+    <h3>His Story</h3>
+    <p>UC San Diego &mdash; economics & math. Self-described <strong>"data nerd."</strong> Started in financial analysis and risk management. Taught himself to program. Built v1 of a lead optimization platform that <strong>increased conversion 25% per client</strong>. Bootstrapped that into EPCVIP &mdash; now a <strong>$200M+ revenue</strong> operation with 50-75 employees. <strong>Zero outside funding.</strong></p>
+    <p>Incorporated Golden Entropy Marketing, Inc. on May 2, 2014 in California. He is CEO, CFO, Secretary, and Director. Has never had a co-founder.</p>
+
+    <h3>His Personality</h3>
+    <ul>
+      <li><strong>Builder first.</strong> Programmer who saw a gap and coded the solution. Talks about technology before revenue.</li>
+      <li><strong>Data-obsessed.</strong> Econ + math degree. CFA analysts on staff. "Less based on intuition, more on hard facts."</li>
+      <li><strong>Promotes from within.</strong> Boris joined 2016 as Affiliate Manager &rarr; now CRO. Garrett joined 2016 as Frontend Dev &rarr; now CCO. Adam Shapira: Media Buyer 2018 &rarr; Director of Innovation.</li>
+      <li><strong>Family culture.</strong> 4.8/5 Glassdoor (24 reviews). Daily free lunches. Quarterly townhalls. Annual retreats.</li>
+      <li><strong>Low-ego.</strong> Zero podcast appearances. Zero press releases. 41 Instagram followers. Lets the work speak.</li>
+      <li><strong>Ambitious.</strong> New R&D org on GitHub (Nov 2025). Built epcvipai.com. Expanding into Earned Wage Access. Wants to go international.</li>
+    </ul>
+
+    <h3>His Memberships</h3>
+    <ul>
+      <li><strong>YPO (Young Presidents' Organization)</strong> &mdash; elite global founder network of ~35K members. Revenue and employee thresholds required. Must join before 45.</li>
+      <li><strong>EO (Entrepreneurs' Organization)</strong> &mdash; high-quality founder network, typically $1M+ revenue companies.</li>
+    </ul>
+
+    <h3>How to Connect With Him</h3>
+    <div class="callout callout-tip">
+      <strong>Strategy</strong>
+      1. Lead with <strong>builder energy</strong>. He self-taught programming. You've built from zero at every company.<br>
+      2. Frame everything in <strong>data terms</strong>. Not "improve visibility" &mdash; give specifics.<br>
+      3. Position yourself as an <strong>enabler</strong>. He built this. Boris built the revenue org. You unlock what's already there.<br>
+      4. Match his <strong>low-ego energy</strong>. Converse, don't perform. If you don't know, say so.<br>
+      5. Signal <strong>longevity</strong>. He keeps people for years. Worst thing: seem like you'll leave in 18 months.
+    </div>
+
+    <h3>His Direct Quotes</h3>
+    <p>Use these to understand how he thinks, <strong>not to quote back at him.</strong></p>
+    <div class="script-line" style="border-left-color: var(--text-tertiary);">"Our unique technology enables us to outperform the competition by making sure we are driving traffic to the most highly optimized landing pages we can generate."</div>
+    <div class="script-line" style="border-left-color: var(--text-tertiary);">"We don't just drive traffic, we drive high-quality leads, sales, and, most importantly, results that foster successful long-term partnerships."</div>
+    <div class="script-line" style="border-left-color: var(--text-tertiary);">"We are much more of a partner than a vendor."</div>
+    <div class="script-line" style="border-left-color: var(--text-tertiary);">"With the right people, team and culture, we can break any ceiling."</div>
+  </div>
+</section>
+
+<!-- ═══════ COMPANY ═══════ -->
+<section class="prep-section" id="company">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon">&#9632;</div>
+    <div class="section-label">
+      <h2>EPCVIP &mdash; The Business</h2>
+      <p>Fintech lead gen, $200M+ revenue, proprietary platform</p>
+    </div>
+    <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+  </div>
+  <div class="section-body">
+
+    <h3>What They Do</h3>
+    <p>Technology company in financial services lead generation. Two-sided marketplace: publishers drive consumer traffic, lenders buy qualified leads. EPCVIP sits in the middle, makes money on the spread. Also generates <strong>first-party traffic</strong> (own PPC, SEO, email) &mdash; highest margin, full control.</p>
+
+    <h3>The Marketplace Flow</h3>
+    <div class="flow-diagram"><span class="highlight">CONSUMER</span> searches for a loan
+        |
+  +-----------+-----------+
+  |                       |
+<span class="highlight">EPCVIP 1st-party</span>    <span class="teal">External publishers</span>
+Own PPC, SEO, email   NerdWallet, Credible
+Highest margin        Media buyers, affiliates
+        |                 |
+        +--------+--------+
+                 |
+    <span class="highlight">EPCVIP PING-POST ENGINE</span>
+    Real-time auction &lt;1.5s
+    Proprietary platform
+                 |
+    +------------+------------+
+    |            |            |
+<span class="teal">Online</span>      <span class="teal">Debt &</span>       <span class="teal">Auto &</span>
+<span class="teal">Lenders</span>     <span class="teal">Credit</span>      <span class="teal">Other</span>
+Personal    Debt consol   Auto fin
+Install.    Credit mon    Auto ins
+Business    EWA (new)     Merchant
+
+<span class="highlight">100+ downstream lenders</span> via Credible
+(Goldman Sachs, SoFi, LendingClub, Upstart...)</div>
+
+    <h3>Ping-Post Mechanics</h3>
+    <p><strong>Only explain if he tests you.</strong></p>
+    <ol>
+      <li>Consumer fills form on landing page (EPCVIP-owned or affiliate)</li>
+      <li>Consent captured via TrustedForm</li>
+      <li>PII stripped &rarr; ping created with attributes only (state, ZIP, credit range, loan amount, income, employment)</li>
+      <li>Ping broadcast to all matching buyers simultaneously</li>
+      <li>Buyers bid within milliseconds</li>
+      <li>Platform decides exclusive vs shared based on total revenue max</li>
+      <li>Winner(s) receive the post: full PII + consent cert</li>
+      <li>If rejected &rarr; waterfall to next bidder (recovery revenue)</li>
+    </ol>
+    <p><strong>Key metrics:</strong> fill rate, acceptance rate, return rate, EPC</p>
+
+    <h3>The Flywheel</h3>
+    <p>Higher EPCs attract better publishers &rarr; better publishers send higher-quality traffic &rarr; higher-quality traffic gets higher buyer bids &rarr; higher buyer bids fund higher EPCs &rarr; cycle repeats. First-party pages add a margin accelerator (no publisher payout = full spread).</p>
+
+    <h3>The Data Gap (Why You're Being Hired)</h3>
+    <div class="callout callout-gold">
+      <strong>The Core Problem</strong>
+      "We have great data from the EPCVIP website but we're not leveraging it enough in HubSpot."<br><br>
+      &bull; Client Relations can't see broken links or buyer volume drops in real time<br>
+      &bull; BizDev can't pull live data to pitch a new lender<br>
+      &bull; Affiliates can't see which publishers convert best without manual reports<br>
+      &bull; Boris doesn't have a unified view connecting platform performance to revenue team activity
+    </div>
+
+    <h3>Tech Stack</h3>
+    <table class="data-table">
+      <tr><th>Layer</th><th>Stack</th></tr>
+      <tr><td>Platform</td><td>PHP/Symfony, Java infra, MySQL, Redis, RabbitMQ/SQS, Elasticsearch</td></tr>
+      <tr><td>ML</td><td>AWS SageMaker (Applied Scientist at $175K)</td></tr>
+      <tr><td>Cloud</td><td>AWS (EC2, Route 53, CloudFront, S3, Lambda, SES, KMS, GuardDuty)</td></tr>
+      <tr><td>CRM</td><td>HubSpot Sales Hub Enterprise (migrated from Salesforce early 2025 via ATAK)</td></tr>
+      <tr><td>Analytics</td><td>Amazon QuickSight + Excel</td></tr>
+      <tr><td>Contracts</td><td>PandaDoc integration</td></tr>
+    </table>
+
+    <h3>Recent Momentum</h3>
+    <ul>
+      <li><strong>LendSuite Lead Provider of the Year 2026</strong> &mdash; real industry peer recognition</li>
+      <li><strong>Q3 2025 Townhall:</strong> 229 goals achieved, 850 milestones, significant YoY growth</li>
+      <li><strong>LEND360 2025: Platinum Sponsor</strong> &mdash; alongside Equifax, LendSuite</li>
+      <li><strong>"epcvip-innovation"</strong> GitHub org created Nov 2025 &mdash; new R&D initiative</li>
+      <li><strong>Expanding into Earned Wage Access (EWA)</strong></li>
+      <li><strong>epcvipai.com</strong> &mdash; internal AI tools platform</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════ ANSWERS ═══════ -->
+<section class="prep-section" id="answers">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon">&#9998;</div>
+    <div class="section-label">
+      <h2>Your Answers</h2>
+      <p>Tap each question to reveal your prepared answer</p>
+    </div>
+    <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+  </div>
+  <div class="section-body">
+
+    <!-- Tell me about yourself -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"Tell me about yourself"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="script-line">5 years at NewtonX from founding team to VP Sales to Chief of Staff. Built CS from scratch, built the sales org, scaled to $12M ARR. Co-founded Traktive &mdash; raised $1.5M, shipped in 4 months, landed enterprise clients. Most recently at Telegraph, built the entire outbound and partnership infrastructure as the first GTM hire. The thread: every role I've taken, I've built the system from zero. Now I want to do that at scale, and that's why EPCVIP.</div>
+        <div class="callout callout-tip">
+          <strong>If he probes deeper</strong>
+          Add Sia Partners: "Before all of that, I spent 5 years at Sia Partners in management consulting &mdash; financial services exclusively. BNP Paribas, Scotiabank, Natixis, Societe Generale, Santander. That's where I learned how to build systems inside complex organizations and where I developed a deep understanding of how financial institutions operate."
+        </div>
+      </div>
+    </div>
+
+    <!-- Why EPCVIP -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"Why EPCVIP?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="script-line">Really love the culture here. Valuing people. Solutions and problem-solving driven. Like a family. The values match mine closely: passionately dedicated, doer mentality, growth oriented, data driven.</div>
+        <p><strong>Drop ONE of these naturally if he probes:</strong></p>
+        <ul>
+          <li>"I saw the Q3 townhall numbers &mdash; 229 goals, 850 milestones. That's a team that's executing."</li>
+          <li>"The LendSuite Lead Provider of the Year recognition tells me the market sees what you've built."</li>
+          <li>"You're a technology company that happens to do lead gen, not the other way around."</li>
+        </ul>
+        <div class="callout callout-warn"><strong>Don't stack these.</strong> One is enough. Let it land.</div>
+      </div>
+    </div>
+
+    <!-- What do you know about our business -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"What do you know about our business?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="callout callout-tip"><strong>Strategy</strong> Start with Layer 1. Let him pull you deeper. Don't dump everything at once.</div>
+        <div class="layer-stack">
+          <div class="layer-item">
+            <div class="layer-label">Layer 1 &mdash; Start Here</div>
+            <p>"Technology company in financial services lead generation. You deliver high-quality leads to lenders &mdash; personal loans, debt consolidation, auto finance, credit monitoring, and you've been expanding into earned wage access. What sets you apart is you're a self-publisher &mdash; you generate your own first-party traffic, not just aggregating."</p>
+          </div>
+          <div class="layer-item">
+            <div class="layer-label">Layer 2 &mdash; If He Nods</div>
+            <p>"Two-sided marketplace. Publishers drive traffic, lenders buy leads. EPCVIP makes money on the spread. And the platform is proprietary, not boberdoo or Phonexa. You built your own optimization engine with ML that does intelligent list segmentation and predicts sales growth per segment."</p>
+          </div>
+          <div class="layer-item">
+            <div class="layer-label">Layer 3 &mdash; If He Pushes</div>
+            <p>"Ping-post auction. PII stripped, ping with attributes only, buyers bid in milliseconds. Platform decides exclusive vs shared based on max total revenue. Rejected leads waterfall to the next bidder. Key metrics: fill rate, acceptance rate, return rate, EPC."</p>
+          </div>
+          <div class="layer-item">
+            <div class="layer-label">Layer 4 &mdash; If Impressed</div>
+            <p>"Partnerships with Credible and NerdWallet. LendSuite Premier Partner. Lead Provider of the Year. Three revenue teams under Boris: BizDev (new buyers), Client Relations (existing), Affiliate Relations (publisher network)."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leadership style -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"What's your leadership style?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <ul>
+          <li><strong>Clear expectations, visible numbers, remove roadblocks.</strong> At NewtonX built dashboards so every rep saw pipeline, win rate, and activity daily.</li>
+          <li><strong>Results over process.</strong> Sales pod hit 74 new clients vs 34 and 33 for the other pods. Gave them tools, targets, and room to run.</li>
+          <li><strong>Fix the process before blaming the person.</strong> Reps were slow on quotes &rarr; built automated quoting in Salesforce &rarr; output doubled in two quarters.</li>
+          <li><strong>Build systems so accountability is built in.</strong> Consolidated pipeline, burn rates, and new logos into executive dashboards. Real-time visibility without compiling reports.</li>
+        </ul>
+        <div class="callout callout-tip"><strong>Why this resonates with Valeriy</strong> He built technology to solve a marketing problem, not a process document. Your examples show the same instinct.</div>
+      </div>
+    </div>
+
+    <!-- Built from scratch -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"Tell me about a time you built something from scratch"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="script-line">Traktive. Co-founded an AI-powered rail logistics platform. Raised $1.5M. Shipped a 5-module MVP in 4 months. Landed 3 enterprise clients &mdash; Nufarm, COLAS, Imerys &mdash; companies with $500M+ revenue. Built everything: product, GTM, pricing, investor relations, advisory board of 13 people. Got to $72K ARR.</div>
+      </div>
+    </div>
+
+    <!-- Failure -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"Tell me about a time you failed"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="script-line">Also Traktive. Got to $72K ARR but couldn't scale past it. Key enterprise deal (Ken's Foods) fell through &mdash; their CFO questioned our durability as a startup. Co-founder resigned mid-pivot. What I learned: POC-level product-market fit is not the same as scalable PMF. And founder alignment matters more than I gave it credit for.</div>
+        <p><em>Valeriy would relate &mdash; he's been sole decision-maker since day one. Never had a co-founder to misalign with.</em></p>
+      </div>
+    </div>
+
+    <!-- 30/60/90 -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"What would you do in your first 30/60/90 days?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <h4>First 30 &mdash; Listen & Map</h4>
+        <p>Sit with each team. Shadow reps. Audit HubSpot: what's used, what's ignored, gaps. Map processes that exist vs ones that should. <strong>Don't change anything yet.</strong></p>
+        <h4>60 Days &mdash; Operating Rhythm & Quick Wins</h4>
+        <p>Stand up L10 cadence across all three teams. Define scorecards (5-7 metrics per team, automated). First quick wins: standardized onboarding checklists, stage definitions, consolidated weekly summary for Boris. Clean up HubSpot adoption gaps.</p>
+        <h4>90 Days &mdash; Prove It & Scope Next</h4>
+        <p>L10 is muscle memory. Boris has one dashboard. Playbooks documented. First automations live (broken link alerts, volume drop flags, renewal triggers). Show before/after. Scope data bridge roadmap with CTO's team.</p>
+        <div class="script-line">Operating rhythm first, standardization second, visibility third, data bridge roadmap last. Listen before I build, prove value before I ask for engineering resources.</div>
+        <div class="callout callout-warn"><strong>Don't present as a slide deck.</strong> Say: "The honest answer is the plan would be the product of an audit in the first 30 days. But the framework is..." and let him pull.</div>
+      </div>
+    </div>
+
+    <!-- Help revenue teams -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"How would you help the revenue teams?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <h4>Axis 1: Help Teams Perform Higher</h4>
+        <p><strong>Data bridge</strong> &mdash; get platform data into HubSpot. Buyer performance (volume, conversion, lead quality, revenue trends). Affiliate performance (EPC, traffic quality, compliance). Real-time pipeline data.</p>
+        <p><strong>Automation</strong> &mdash; Broken link &rarr; task to AM. Buyer volume drops 20% &rarr; alert before they complain. Publisher quality dips &rarr; flag for affiliate team. Deal stalls &rarr; auto-task. Contract renewal &rarr; trigger workflow. Nightly summary &rarr; Slack/email.</p>
+        <p><strong>Standardization</strong> &mdash; Playbooks per team. Stage definitions and exit criteria. Make 26 HubSpot users consistent.</p>
+        <p><strong>Cross-team intelligence</strong> &mdash; Affiliate scales auto finance traffic &rarr; BizDev pitches auto lenders. Buyer wants more debt volume &rarr; Affiliates recruit debt publishers. One revenue engine, not three silos.</p>
+        <h4>Axis 2: Give Boris Leverage</h4>
+        <p>One dashboard across all three teams. Who's performing, who's at risk, who's following process. Revenue by buyer, vertical, affiliate. L10 rhythm with consolidated weekly summary. <strong>He manages by exception, not by chasing updates.</strong></p>
+      </div>
+    </div>
+
+    <!-- AI in RevOps -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"How do you think about AI in RevOps?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <ul>
+          <li><strong>Automate</strong> tasks: reporting, data pulls, status updates</li>
+          <li><strong>Surface actions:</strong> follow up on leads, fix issues, flag anomalies</li>
+          <li><strong>Provide insights:</strong> which affiliates produce best-converting leads, which buyers are ready for cross-sell, patterns humans miss at this volume</li>
+        </ul>
+        <div class="callout callout-tip"><strong>If vibe is right</strong> "I know the company has been investing in AI internally &mdash; and I think there's a real opportunity to bring AI-powered insights to the revenue teams specifically." <em>(Subtly references epcvipai.com without naming it.)</em></div>
+      </div>
+    </div>
+
+    <!-- L10 meetings -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"How would you run L10 meetings across three departments?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="script-line">One L10 per team per week. Same structure: scorecard review, rock update, then IDS on the top 2-3 issues. 60 minutes max. Scorecard data is automated before the meeting starts. Meeting is about solving problems, not reporting numbers. Consolidate key issues into a weekly summary for Boris.</div>
+        <table class="data-table">
+          <tr><th>Team</th><th>Scorecard Metrics</th></tr>
+          <tr><td>BizDev</td><td>Pipeline, new buyers closed, meetings booked</td></tr>
+          <tr><td>Client Relations</td><td>Buyer health scores, revenue retention, open issues</td></tr>
+          <tr><td>Affiliates</td><td>EPC, traffic quality, compliance flags</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Where in 3-5 years -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"Where do you see yourself in 3-5 years?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="script-line">Running GTM operations here as the company grows. Taking what we build in year one and scaling it. Not looking for a stepping stone.</div>
+        <div class="callout callout-tip"><strong>Builder connection (if right moment)</strong> "Valeriy, you built this company from a first version of the platform all the way to what it is today. I want to be part of the next chapter &mdash; where the revenue operations match the sophistication of the technology platform you've built."</div>
+      </div>
+    </div>
+
+    <!-- Why did you leave -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"Why did you leave your last role?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="script-line">We covered it in earlier rounds. Policy disagreement, professional separation, I've been building since.</div>
+        <div class="callout callout-warn"><strong>Move on.</strong> They already know. Adam Shapira said he'd done the same thing and they just fixed it. Non-issue.</div>
+      </div>
+    </div>
+
+    <!-- Managing managers -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"Experience managing managers?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <ul>
+          <li><strong>NewtonX:</strong> Managed team leads within CS who had their own reports. Built hiring playbooks, comp structures, performance frameworks. Scaled CS to 10+ people.</li>
+          <li><strong>Traktive:</strong> Managed Jacob (co-founder/CTO) plus 13-person advisory board.</li>
+        </ul>
+        <div class="script-line">Most of my management experience is managing ICs directly. But this role is about building systems and running operating rhythm across three departments &mdash; enabling department heads, not managing them. That's closer to my CoS experience at NewtonX.</div>
+      </div>
+    </div>
+
+    <!-- Salary -->
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">Q</span>
+        <span class="qa-q-text">"Salary expectations?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <div class="script-line">$200K base.</div>
+        <p><strong>Stand firm.</strong></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════ QUESTIONS TO ASK ═══════ -->
+<section class="prep-section" id="questions">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon">?</div>
+    <div class="section-label">
+      <h2>Questions to Ask Valeriy</h2>
+      <p>Pick 3-4 max. Let the conversation dictate which ones.</p>
+    </div>
+    <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+  </div>
+  <div class="section-body">
+    <h3>Your Core Questions</h3>
+    <ol>
+      <li>"Where's the biggest gap between where the revenue org is today and where you want it in 12 months?"</li>
+      <li>"What made you decide to create this role now?"</li>
+      <li>"How do you want this role to work with John's engineering team on the data side?"</li>
+      <li>"What's one thing you wish the revenue teams had better visibility into today?"</li>
+      <li>"What does winning look like for whoever takes this role in year one?"</li>
+    </ol>
+
+    <h3>Research-Informed (Pick 1-2 Max)</h3>
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">+</span>
+        <span class="qa-q-text">"You built the platform yourself from v1. How do you think about the balance between building more tech vs getting existing data into the revenue teams' hands?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <p>Speaks to his builder identity. Frames your role as the bridge between his technology and Boris's teams. Also probes whether the company prioritizes engineering investment over RevOps enablement.</p>
+      </div>
+    </div>
+    <div class="qa-card">
+      <div class="qa-question" onclick="this.parentElement.classList.toggle('open')">
+        <span class="qa-q-marker">+</span>
+        <span class="qa-q-text">"I know the team went through the HubSpot migration. What's the sentiment &mdash; are people bought in, or is there still friction?"</span>
+        <svg class="qa-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+      </div>
+      <div class="qa-answer">
+        <p>Shows you understand change management. Migration was done by external agency about a year ago. Likely has adoption gaps. Signals you know tool implementation is only half the battle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ REFERENCE ═══════ -->
+<section class="prep-section" id="reference">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon">&#9881;</div>
+    <div class="section-label">
+      <h2>Reference Data</h2>
+      <p>Org chart, teams, verticals, competitive landscape</p>
+    </div>
+    <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+  </div>
+  <div class="section-body">
+    <h3>Key People</h3>
+    <div class="person-card">
+      <div class="person-avatar" style="background: linear-gradient(135deg, #d4a574, #e8c49a);">VZ</div>
+      <div class="person-info"><h5>Valeriy Zeltser</h5><p>CEO & Founder. UC San Diego. YPO member. Built the platform himself.</p></div>
+    </div>
+    <div class="person-card">
+      <div class="person-avatar" style="background: linear-gradient(135deg, #5bb8ae, #7dd3c9);">BB</div>
+      <div class="person-info"><h5>Boris Bershadsky</h5><p>CRO. Your boss. 9 direct reports. Joined 2016 as Affiliate Manager, now CRO.</p></div>
+    </div>
+    <div class="person-card">
+      <div class="person-avatar" style="background: linear-gradient(135deg, #6b8dd6, #8ea8e8);">JL</div>
+      <div class="person-info"><h5>John Lambert</h5><p>CTO. 13 reports. Your partner for the data bridge.</p></div>
+    </div>
+    <div class="person-card">
+      <div class="person-avatar" style="background: linear-gradient(135deg, #c9635e, #e07a75);">EW</div>
+      <div class="person-info"><h5>Eric Wex</h5><p>CSO. You've already met him. Interested in your LLM/SEO project.</p></div>
+    </div>
+    <div class="person-card">
+      <div class="person-avatar" style="background: linear-gradient(135deg, #8b7ec8, #a899db);">AS</div>
+      <div class="person-info"><h5>Adam Shapira</h5><p>Director of Innovation. BizDev. Media Buyer 2018 &rarr; promoted. Q3 recognition award.</p></div>
+    </div>
+    <div class="person-card">
+      <div class="person-avatar" style="background: linear-gradient(135deg, #7db87d, #9cd09c);">GA</div>
+      <div class="person-info"><h5>Garrett Axelrod</h5><p>CCO. Frontend Dev 2016 &rarr; Chief Creative Officer.</p></div>
+    </div>
+    <div class="person-card">
+      <div class="person-avatar" style="background: linear-gradient(135deg, #c4956e, #d9b08c);">AT</div>
+      <div class="person-info"><h5>Alsu Tarzimanov</h5><p>Head of HR. Accepted your LinkedIn.</p></div>
+    </div>
+    <div class="person-card">
+      <div class="person-avatar" style="background: linear-gradient(135deg, #b07acc, #c898de);">KP</div>
+      <div class="person-info"><h5>Kirill Pokotilov</h5><p>Director of Affiliate Relations. Since 2017.</p></div>
+    </div>
+
+    <h3>The Three Revenue Teams</h3>
+    <table class="data-table">
+      <tr><th>Team</th><th>Function</th><th>Key People</th></tr>
+      <tr><td>Affiliate Relations</td><td>Recruit & manage publishers. Monitor EPC, volume, quality, compliance.</td><td>Kirill Pokotilov, Sonia Lent</td></tr>
+      <tr><td>Client Relations</td><td>Manage active buyer relationships. Troubleshoot, renewals, cross-sell.</td><td>Michelle Abramov, Brittany Trautman</td></tr>
+      <tr><td>Business Development</td><td>Prospect & close new lenders. Conference circuit.</td><td>Adam Shapira</td></tr>
+    </table>
+
+    <h3>Verticals</h3>
+    <p>Personal loans, debt consolidation, installment loans, company/business loans, credit monitoring, auto finance, auto insurance, health & beauty, merchant processing, <strong>Earned Wage Access (new)</strong></p>
+
+    <h3>Competitive Landscape</h3>
+    <ul>
+      <li><strong>Not competing with:</strong> LendingTree, NerdWallet (potential buyers on the platform)</li>
+      <li><strong>Real peers:</strong> Astoria Company, other private ping-post operators</li>
+      <li><strong>Tech alternatives:</strong> boberdoo, Phonexa, Lead Prosper, PX</li>
+      <li><strong>New entrant:</strong> Engine by MoneyLion (embedded finance API)</li>
+      <li><strong>EPCVIP edge:</strong> proprietary tech + first-party traffic</li>
+    </ul>
+
+    <h3>Interview Process Recap</h3>
+    <p>3 rounds: <strong>HR</strong> (Alsu) &#10003; &rarr; <strong>Department</strong> (Boris + Adam + Eric Wex) &#10003; &rarr; <strong>CEO</strong> (Valeriy) &larr; <em>you are here</em></p>
+
+    <h3>Round 1 & 2 Watch-outs</h3>
+    <div class="callout callout-warn">
+      <strong>Potential Re-asks</strong>
+      &bull; <strong>Managing managers</strong> &mdash; frame honestly. NewtonX CS team leads + Traktive co-founder/CTO + 13-person advisory board.<br>
+      &bull; <strong>HubSpot for sellers</strong> &mdash; don't overstate. Built for yourself and 1 SDR at Telegraph. Stronger proof: Salesforce tools for 6+ sellers and 10+ CS at NewtonX.<br>
+      &bull; <strong>Their teams are more account management than outbound.</strong> Lean into CS experience at NewtonX, not just sales.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ DON'TS ═══════ -->
+<section class="prep-section" id="donts">
+  <div class="section-header" onclick="toggleSection(this)">
+    <div class="section-icon" style="background: var(--red-dim); border-color: rgba(201,99,94,0.15); color: var(--red-soft);">&#10005;</div>
+    <div class="section-label">
+      <h2>Don'ts</h2>
+      <p>Things that will hurt you</p>
+    </div>
+    <svg class="section-chevron" viewBox="0 0 20 20" fill="currentColor"><path d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"/></svg>
+  </div>
+  <div class="section-body">
+    <ul>
+      <li><strong>Don't present a detailed 90-day plan.</strong> Say you'd listen first.</li>
+      <li><strong>Don't name-drop the ATAK case study.</strong> Show you know the stack without citing your source.</li>
+      <li><strong>Don't relitigate Telegraph.</strong> "Policy disagreement, professional separation, been building since." Move on.</li>
+      <li><strong>Don't ask generic questions</strong> like "what's the culture like" or "tell me about the team."</li>
+      <li><strong>Don't shift your energy</strong> from whatever worked in Round 2.</li>
+      <li><strong>Don't stack proof points.</strong> Drop one, let it land.</li>
+      <li><strong>Don't overstate HubSpot multi-seller experience.</strong> Lead with NewtonX Salesforce, not Telegraph HubSpot.</li>
+      <li><strong>Don't mention tribal lending, epcvipair.com, Navtivo, or other ventures</strong> unless he brings them up.</li>
+      <li><strong>Don't quote his own words back at him.</strong> Understand them, don't recite them.</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+// ── Section toggle ──
+function toggleSection(header) {
+  const body = header.nextElementSibling;
+  const isOpen = header.classList.contains('open');
+  header.classList.toggle('open');
+  body.classList.toggle('visible');
+}
+
+// ── Nav buttons ──
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const target = document.getElementById(btn.dataset.target);
+    if (target) {
+      const header = target.querySelector('.section-header');
+      if (header && !header.classList.contains('open')) {
+        toggleSection(header);
+      }
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ── Intersection observer for nav highlighting ──
+const sections = document.querySelectorAll('.prep-section');
+const navBtns = document.querySelectorAll('.nav-btn');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navBtns.forEach(btn => btn.classList.remove('active'));
+      const match = document.querySelector(`.nav-btn[data-target="${entry.target.id}"]`);
+      if (match) match.classList.add('active');
+    }
+  });
+}, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
